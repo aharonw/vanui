@@ -8,7 +8,7 @@ style.href = chrome.extension.getURL('css/vanui.css');
 //Move the "Go To" bar up so it can stretch entire page
 $(".masterbanner").insertBefore("#ctl00_MasterPageMainTable");
 
-//Insert a custom logo iamge and pull the committe name
+//Insert a custom logo image
 var logoURL = chrome.extension.getURL('images/whiteCircles.svg');
 $("<img id='ngpvan-logo-image' src='" + logoURL + "' />").insertBefore("#header-van-goto");
 
@@ -17,6 +17,7 @@ var pageTitle = $(document).find("title").text();
 pageTitle = pageTitle.substring(0, pageTitle.indexOf("-") - 1);
 $("<h1 id='ngpvan-logo-name'>" + pageTitle + "</h1>").insertAfter("#ngpvan-logo-image");
 
+//Custom styling for Login page
 if ( document.location.href.indexOf('Login') > -1 ) {
     $(".masterbanner").remove();
     $('body').removeClass('Grey-body classicColor').addClass('justin-login-page');
@@ -27,24 +28,25 @@ if ( document.location.href.indexOf('Login') > -1 ) {
     $('#ctl00_ContentPlaceHolderVANPage_TableCellLoginContentBkgdSpaceRight').remove();
 }
 
+//Custom styling for login-like PIN page
 if ( document.location.href.indexOf('PIN') > -1 ) {
     $('.login-form').css('width', '970px');
 }
 
-//Insert a sample user profile image to show logged-in user
+//Insert a sample user profile image to show logged-in user, for now a picture of me :)
 var userphotoURL = chrome.extension.getURL('images/justin.jpg');
 $("<img id='ngpvan-user-image' src='" + userphotoURL + "' />").insertAfter("#context-header-div ul li:last-child");
 
-//Insert div for new tabs UI
+//Insert div for new tabs UI at top of page
 $("<div id='ngpvan-tabs-bar'></div>").insertBefore(".masterbanner");
 
-//Move existing tabs into new div for new styling
+//Move existing tabs into new tabs div for new styling
 $("#header ul").appendTo("#ngpvan-tabs-bar");
 
-//More googley footer text and get rid of the old date
+//More googley footer text and get rid of the old starting date!
 $('.footer').html('<span id="ctl00_LabelCopyright">&copy; 2014 NGP VAN, Inc - <a href="http://www.ngpvan.com/content/privacy-policy" target="_blank">Privacy Policy</a></span>');
 
-//Everything else below is just updating icons
+//Everything else below is just updating icons...fun times!
 //Default.aspx icons
 $('#ctl00_ContentPlaceHolderVANPage_HyperLinkImageIconQuickLookUp').html('<img src="' + chrome.extension.getURL('images/glyphicons_027_search.png') + '" />');
 $('#ctl00_ContentPlaceHolderVANPage_HyperLinkImageIconCreateANewList').html('<img src="' + chrome.extension.getURL('images/glyphicons_149_folder_new.png') + '" />');
