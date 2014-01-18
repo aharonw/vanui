@@ -1,0 +1,819 @@
+/* 
+    Author     : jlewis@ngpvan.com
+*/
+
+html body {
+    margin: 0 !important;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -webkit-transform: translate3d(0, 0, 0);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    border-color: #ccc;
+    background: none !important;
+}
+
+.justin-login-page {
+    background-color: #3498DB !important;
+}
+
+.justin-login-page span.footer span, .justin-login-page span.footer span a {
+    color: #fff !important;
+}
+
+body.classicColor, body.Grey-body {
+    background: #fff !important;
+}
+
+a, a:link, a:visited {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.masterpage .van-mainmenu .van-adminsection .SideBarCellHeader span, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:link, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:visited, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:hover, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:active, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover span, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:link, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:visited, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:hover, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:active {
+    color: #0088cc;
+    text-decoration: none;
+}
+
+table.masterpage {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.masterpage .header-nav {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    background: none !important;
+}
+
+table.ContentSetup1 {
+    border: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    background-color: #fff !important;
+}
+
+.van-mainmenu {
+    margin-top: 0 !important;
+}
+
+.masterpage .van-mainmenu .van-col {
+    margin-left: 0;
+    margin-right: 30px;
+    margin-top: 0;
+}
+
+.masterpage .van-mainmenu .col3 {
+    margin-right: 0;
+}
+
+#TDContentPlaceHolderVANPage {
+    background-color: #fff !important;
+    box-shadow: none !important;
+}
+
+span.footer {
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+span.footer span {
+    color: #888 !important;
+    font-size: 11px;
+}
+
+table.ContentSetup1 #TDContentPlaceHolderVANPage {
+    padding-bottom: 0px;
+}
+
+.masterpage .van-inner {
+/*    width: 948px;*/
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+.van-specialdetails {
+    border-top: 5px solid #3498DB;
+}
+
+.masterpage #vanHeader, .WizardTableSection .SectionHeading {
+    background-color: #fff;
+    background-image: none;
+    border-bottom: none;
+    border: 0;
+    box-shadow: none;
+}
+
+body .WizardSpecialRow, .ListFilterPanelButtons {
+    background: #fff;
+}
+
+h1, h2, h3, h4, h5, h6, .MenuTableHeader, .Headline1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: bold;
+}
+
+#vanContent {
+    padding: 0;
+}
+
+table.WizardTable, .ListFilterPanel, .masterpage .van-gridpage .WizardTable {
+    border: none;
+}
+
+.masterpage .header-nav .BreadCrumbs ul {
+    background: #fff !important;
+    border: 1px solid #dedede;
+    padding: 3px;
+}
+
+.masterpage .header-nav .BreadCrumbs {
+    color: #000 !important;
+    padding: 0 0 5px 0;
+    max-width: none;
+}
+
+.BottomHeaderRow #header li.green a {
+    background-image: -webkit-linear-gradient(top, #F1C40F, #F1C40F);
+}
+
+.BottomHeaderRow #header li.tan a {
+    background-image: -webkit-linear-gradient(top, #C0392B, #C0392B);
+}
+
+.BottomHeaderRow #header li a {
+    background-image: -webkit-linear-gradient(top, #7F8C8D, #7F8C8D);
+}
+
+.masterpage .MenuTable {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid #dedede !important;
+    margin-bottom: 30px !important;
+}
+
+.masterpage .MenuTable .MenuTableHeader {
+    background: none;
+    background-color: #f1f1f1;
+    border: none;
+    border-bottom: 1px solid #dedede;
+    font-weight: bold;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+}
+
+.masterpage .van-mainmenu .MenuTable .MenuTableNoBorder {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.masterpage .van-mainmenu .MenuTable .van-default-navigation a, .masterpage .van-mainmenu .MenuTable .van-default-navigation a.SideBarLink, .masterpage .van-mainmenu .MenuTable .topborder a, .masterpage .van-mainmenu .MenuTable .topborder a.SideBarLink {
+    font-size: 14px;
+}
+
+.masterpage .MenuTable a.SideBarLink:link, .masterpage .MenuTable a.SideBarLink:visited, .masterpage .MenuTable a.SideBarLink:hover, .masterpage .MenuTable a.SideBarLink:active {
+    color: #0088cc;
+}
+
+.masterpage .header-nav .MenuIcons a.Wiki span, .masterpage .header-nav .MenuIcons a.New span, a.Wiki span {
+    background: none;
+}
+
+.ResultsGridViewControlStyle .ResultsHeaderStyle th, .ResultsGridViewControlStyle .StandardDataTableRenderer_TableHeaderRowTemplate_Table th, .ResultsGridViewControlStyle .rgMasterTable th {
+    background-image: none;
+    background: #eee !important;
+    border-bottom: 1px solid #ccc;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.masterpage .van-QuickLookUp table tr.ResultsPagerStyle0 > td {
+    padding: 0;
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #ccc;
+}
+
+.ResultsGridViewControlStyle .ResultsPagerStyle0, .ResultsGridViewControlStyle .StandardDataTableRenderer_TableFooterRowTemplate_Td {
+    background: #eee !important;
+    color: #000;
+    height: 45px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.van-list table.ResultsGridViewControlStyle .ResultsPagerStyle0 .SubTablePagerStyle {
+    margin: 0 auto;
+}
+
+table#ctl00_TableDebug {
+    display: none;
+}
+
+.masterbanner {
+    height: 50px;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+div#context-header-div {
+    height: 50px;
+    padding-top: 10px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    top: auto !important;
+}
+
+#context-header-div ul {
+    padding: 0;
+    width: 985px;
+    margin: 0 auto;
+}
+
+body.Grey-body div#context-header-div {
+    background-color: #3498DB;
+}
+
+.TopHeaderRow {
+    display: none;
+}
+
+.BottomHeaderRow {
+    display: none;
+}
+
+.masterpage .van-specialdetails #vanHeader {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    padding: 10px;
+}
+
+.masterpage .van-specialdetails #vanContent table.ControlPanelTable {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    width: 970px;
+}
+
+.page-section-root .AddPageSectionContainer_Table {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid #ddd !important;
+}
+
+body.Grey-body .van-ContactsDetails .InnerPanel .AddPageSectionContainer_SectionHeading_Td SortableSwitch, body.Grey-body .van-ContactsDetails .InnerPanel .AddPageSectionContainer_SectionHeading_Td, .Grey-theme .van-ContactsDetails .InnerPanel .AddPageSectionContainer_SectionHeading_Td SortableSwitch, .Grey-theme .van-ContactsDetails .InnerPanel .AddPageSectionContainer_SectionHeading_Td {
+    background-image: none;
+    background: #f1f1f1 !important;
+}
+
+body.Grey-body .AddPageSectionContainer_SectionHeading_Td span, body.Grey-body .van-popup #ctl00_ContentPlaceHolderVANPage_VANEventSchedulerUtility_TRHeaderRow span, .Grey-theme .AddPageSectionContainer_SectionHeading_Td span, .Grey-theme .van-popup #ctl00_ContentPlaceHolderVANPage_VANEventSchedulerUtility_TRHeaderRow span {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 13px;
+    font-weight: bold !important;
+}
+
+.van-list .SectionHeading, .van-list .StandardDataTableRenderer_TableHeaderRowTemplate_Th, .WizardTableTerryBoxes .SectionHeading, .WizardTableTerryBoxes .StandardDataTableRenderer_TableHeaderRowTemplate_Th, .InnerPanel_ContentPanel .SectionHeading, .InnerPanel_ContentPanel .StandardDataTableRenderer_TableHeaderRowTemplate_Th {
+    background: #ddd;
+}
+
+.van-list .SectionHeading, .van-list .StandardDataTableRenderer_TableHeaderRowTemplate_Th, .WizardTableTerryBoxes .SectionHeading, .WizardTableTerryBoxes .StandardDataTableRenderer_TableHeaderRowTemplate_Th, .InnerPanel_ContentPanel .SectionHeading, .InnerPanel_ContentPanel .StandardDataTableRenderer_TableHeaderRowTemplate_Th {
+    color: #444;
+}
+
+.van-NationalDashboard .moduleHeader {
+    background-image: none;
+    background-color: #eee;
+}
+
+.masterpage .van-mainmenu .MenuTable .ContactsFrame td a {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.masterpage .van-mainmenu .MenuTable .ContactsFrame td a.van-accordianchildren {
+    font-size: 13px;
+}
+
+.masterpage .van-mainmenu .van-adminsection .SideBarCellHeader span, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:link, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:visited, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:hover, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeader a.SideBarLink:active, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover span, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:link, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:visited, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:hover, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover a.SideBarLink:active {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.masterpage .van-mainmenu .SideBar a.SideBarLink:link, .masterpage .van-mainmenu .SideBar a.SideBarLink:visited, .masterpage .van-mainmenu .SideBar a.SideBarLink:hover, .masterpage .van-mainmenu .SideBar a.SideBarLink:active, .masterpage .van-mainmenu .SideBar .SideBarLink {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 11px;
+}
+
+.WizardTable {
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.WizardTableFilters {
+    padding: 0;
+    border: 1px solid #ddd;
+}
+
+.WizardTableInnerTable {
+    width: 100%;
+}
+
+table.ResultsGridViewControlStyle {
+    width: 100% !important;
+    border-color: #ccc;
+}
+
+.ResultsPagerStyle0, .ResultsPagerStyle0 td {
+    background-color: #f1f1f1;
+}
+
+.WizardResults, .WizardResults td {
+    background-color: #f1f1f1;
+    padding-bottom: 10px !important;
+    border: none !important;
+}
+
+table.SubTablePagerStyle, table.SubTablePagerStyle td {
+    background-color: #f1f1f1;
+}
+
+body.Grey-body .AddPageSectionContainer_SectionHeading_Td, body.Grey-body .van-popup #ctl00_ContentPlaceHolderVANPage_VANEventSchedulerUtility_TRHeaderRow, .Grey-theme .AddPageSectionContainer_SectionHeading_Td, .Grey-theme .van-popup #ctl00_ContentPlaceHolderVANPage_VANEventSchedulerUtility_TRHeaderRow {
+    background-image: none;
+    background-color: #eee;
+}
+
+.masterpage .van-ContactDetailScript .StandardDataTableRenderer_TableFooterRowTemplate_Td, .masterpage .van-ContactDetailScript .ContactsDoStuff, .masterpage .van-ContactDetailScriptPDialer .StandardDataTableRenderer_TableFooterRowTemplate_Td, .masterpage .van-ContactDetailScriptPDialer .ContactsDoStuff {
+    background-color: #eee;
+}
+
+body.Grey-body .AddPageSectionContainer_SectionHeading_Td span, body.Grey-body .van-popup #ctl00_ContentPlaceHolderVANPage_VANEventSchedulerUtility_TRHeaderRow span, .Grey-theme .AddPageSectionContainer_SectionHeading_Td span, .Grey-theme .van-popup #ctl00_ContentPlaceHolderVANPage_VANEventSchedulerUtility_TRHeaderRow span {
+    color: #444;
+}
+
+.AddPageSectionContainer_SectionHeading_Td {
+    padding: 5px;
+}
+
+#ctl00_ContentPlaceHolderVANPage_VANSectionHeadingNarrow_ctl00_ctl12_EID4105EACNotesNarrowNoteTextBox {
+    width: 100% !important;
+    padding: 0 !important;
+    padding-left: 5px !important;
+}
+
+.masterpage .van-ContactDetailScript .pageSectionPanel_NotesNarrow table tbody tr td.AddPageSectionContainer_SectionHeading_Td span, .masterpage .van-ContactDetailScriptPDialer .pageSectionPanel_NotesNarrow table tbody tr td.AddPageSectionContainer_SectionHeading_Td span {
+    color: #444;
+}
+
+.masterpage .van-ContactDetailScript .pageSectionPanel_Notes .AddPageSectionContainer_SectionHeading_Td, .masterpage .van-ContactDetailScript .pageSectionPanel_NotesNarrow .AddPageSectionContainer_SectionHeading_Td, .masterpage .van-ContactDetailScriptPDialer .pageSectionPanel_Notes .AddPageSectionContainer_SectionHeading_Td, .masterpage .van-ContactDetailScriptPDialer .pageSectionPanel_NotesNarrow .AddPageSectionContainer_SectionHeading_Td {
+    padding-bottom: 5px;
+}
+
+.masterpage .van-specialdetails h2.vanSubHeader {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+.masterpage .van-expandabledetails #vanContent td.SectionHeading {
+    background-image: none;
+    background: #f1f1f1 !important;
+}
+
+.WizardTableSection {
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border: 1px solid #ddd;
+}
+
+.WizardTableSection .SectionHeading {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 13px !important;
+}
+
+.van-popup.RadWindow .rwTitleRow em {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: #444 !important;
+}
+
+.rwTitlebarControls {
+    background-image: none !important;
+    background-color: #dedede !important;
+    box-shadow: none !important;
+    border-bottom: 2px solid #ccc;
+    color: #444 !important;
+}
+
+.DefaultTitleBar em {
+    padding: 5px;
+    font-size: 24px !important;
+}
+
+.masterpage .van-mainmenu .van-adminsection {
+    font-size: 12px;
+    border: 1px solid #dedede !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+}
+
+.masterpage .van-mainmenu .van-adminsection .SideBarCellHeader span, .masterpage .van-mainmenu .van-adminsection .SideBarCellHeaderHover span {
+    font-size: 12px;
+}
+
+.masterpage .van-mainmenu .van-adminsection .SideBarCell a.SideBarLink:link, .masterpage .van-mainmenu .van-adminsection .SideBarCell a.SideBarLink:visited, .masterpage .van-mainmenu .van-adminsection .SideBarCell a.SideBarLink:hover, .masterpage .van-mainmenu .van-adminsection .SideBarCell a.SideBarLink:active { 
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.masterpage .van-mainmenu .SideBar {
+    background: #f9f9f9;
+    border: 1px solid #dedede !important;
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.masterpage .van-mainmenu .SideBar .SideBarHeader {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.masterpage .van-mainmenu .SideBar .SideBarContent, .masterpage .van-mainmenu .SideBar .SideBarContentNoHover {
+    border-bottom: 1px solid #dedede;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+}
+
+.masterpage .van-mainmenu .SideBar a.SideBarLink:link, .masterpage .van-mainmenu .SideBar a.SideBarLink:visited, .masterpage .van-mainmenu .SideBar a.SideBarLink:hover, .masterpage .van-mainmenu .SideBar a.SideBarLink:active, .masterpage .van-mainmenu .SideBar .SideBarLink {
+    color: #0088cc;
+}
+
+.masterpage .van-mainmenu .SideBar .van-personalsection a.SideBarLink:hover, .masterpage .van-mainmenu .SideBar a.SideBarLink:active {
+    color: #0088cc;
+}
+
+#ngpvan-logo-image {
+    margin-left: 15px;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+#context-header-div ul li {
+    margin-top: 7px;
+}
+
+#ngpvan-logo-name {
+    float: left;
+    margin-left: 4px;
+    margin-top: 2px;
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif !important;
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+#ngpvan-user-image {
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.MenuIcons {
+    display: none;
+}
+
+#ngpvan-tabs-bar {
+    background: #fff;
+    overflow: hidden;
+}
+
+#ngpvan-tabs-bar ul {
+    margin: 0 auto;
+    width: 980px;
+    color: #000;
+    overflow: hidden;
+    list-style: none;
+}
+
+#ngpvan-tabs-bar ul li {
+    line-height: 20px;
+    font-size: 13px;
+    padding: 7px 20px;
+    color: #666;
+    float: right;
+    border-top: 3px solid #fff;
+}
+
+#ngpvan-tabs-bar ul li a {
+    color: #444;
+}
+
+#ngpvan-tabs-bar ul li:last-child {
+    margin-right: 0;
+}
+
+#ngpvan-tabs-bar ul li a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+#ngpvan-tabs-bar ul .grey-act {
+    font-weight: bold;
+    color: #fff;
+    background: #3498DB;
+    border-top: 3px solid #3498DB;
+}
+
+#ngpvan-tabs-bar ul .grey-act a {
+    color: #fff;
+}
+
+#ngpvan-tabs-bar ul .grey-act a:hover {
+    color: #fff;
+}
+
+#ngpvan-tabs-bar ul .grey {
+    border-top: 3px solid #27AE60;
+}
+
+#ngpvan-tabs-bar ul .green {
+    border-top: 3px solid #E74C3C;
+}
+
+#ngpvan-tabs-bar ul .green-act {
+    border-top: 3px solid #E74C3C;
+    background-color: #E74C3C;
+}
+
+body.Green-body div#context-header-div {
+    background-color: #E74C3C;
+}
+
+#ngpvan-tabs-bar ul .green-act a {
+    color: #fff;
+}
+
+#ngpvan-tabs-bar ul .green-act a:hover {
+    color: #fff;
+}
+
+#ngpvan-tabs-bar ul .tan {
+    border-top: 3px solid #F1C40F;
+}
+
+#ngpvan-tabs-bar ul .tan-act {
+    border-top: 3px solid #F1C40F;
+    background-color: #F1C40F;
+}
+
+body.Tan-body div#context-header-div {
+    background-color: #F1C40F;
+}
+
+#ngpvan-tabs-bar ul .tan-act a {
+    color: #fff;
+}
+
+#ngpvan-tabs-bar ul .tan-act a:hover {
+    color: #fff;
+}
+
+#ngpvan-tabs-bar ul .active:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.QuickNavAutoCompleteWrapper {
+    top: 70px;
+    border: 1px solid #dedede;
+    box-shadow: 5px 5px 3px -5px rgba(0, 0, 0, 0.15);
+}
+
+.ResultsHeaderStyle, .ResultsHeaderStyle th {
+    border-color: #ccc;
+    background-color: #f1f1f1;
+}
+
+table.ResultsGridViewControlStyle td, table.ResultsGridViewControlStyleIE td {
+    border-color: #ccc;
+}
+
+body .van-detailspage .WizardTableDetailsInnerTable, body .van-wizardpage .WizardTableDetailsInnerTable {
+    width: 100%;
+}
+
+#ctl00_ContentPlaceHolderVANPage_ControlPanel_CanvassedByColumn tr {
+    padding-bottom: 10px;
+}
+
+.MenuTableNoBorder tr {
+    height: 70px !important;
+}
+
+.MenuTableNoBorder tr td a, .SideBarLink {
+/*    color: #444 !important;
+    text-decoration: underline !important;*/
+}
+
+.MenuTableNoBorder tr td a:hover {
+    text-decoration: underline;
+}
+
+.masterpage .ControlPanelTable .ViewModesColumnInnerContainer {
+    background-image: none;
+    background-color: #f1f1f1;
+}
+
+.ViewModesColumnInnerContainer {
+    border: 1px solid #dedede !important;
+    border-radius: 3px !important;
+}
+
+.StandardViewCell {
+    border-radius: 0 !important;
+}
+
+.ScriptViewCell {
+    border-right: solid 1px #ccc;
+}
+
+.FormViewCell {
+    border-radius: 0 !important;
+}
+
+.masterpage .ControlPanelTable .StandardViewCell, .masterpage .ControlPanelTable .FormViewCell, .masterpage .ControlPanelTable .ScriptViewCell {
+    padding: 5px !important;
+    min-width: 75px !important;
+    padding-top: 10px !important;
+}
+
+.masterpage .ControlPanelTable .ViewModesColumn {
+    border-right: 0;
+}
+
+.masterpage .ControlPanelTable #NavigationAndSaveColumn {
+    padding-left: 20px;
+    border-left: 1px solid #dedede;
+    min-width: 170px !important;
+}
+
+.SetupActionsSection_ActionTable {
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    background: transparent !important;
+}
+
+#TableContentSetup img, input[type="image"] {
+    opacity: .55;
+}
+
+.masterpage .van-subsection .WizardTableSpecialRow .WizardTableInnerTable .WizardSpecialRow, .masterpage table.WizardTableSection .van-subsection .WizardTableSpecialRow .WizardTableInnerTable .WizardSpecialRow {
+    background-image: none;
+    background-color: #ccc;
+}
+
+.van-counts {
+    width: 259px;
+    margin-top: 20px;
+    height: 129px;
+}
+
+.van-counts .Headline2 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.van-counts .count-left {
+    font-size: 28px !important;
+    font-weight: bold;
+}
+
+.van-mylist-innernav #outerBox {
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+body.Green-body .WizardTableSection .SectionHeading, body.Green-body .MenuTable .MenuTableHeader, body.Green-body .van-expandabledetails table.InnerPanel, body.Green-body .van-expandabledetails #vanContent td.SectionHeading, body.Green-body .van-ContactsDetails .InnerPanel, body.Green-theme #vanHeader, body.Green-theme .WizardTableSection .SectionHeading, body.Green-theme .MenuTable .MenuTableHeader, body.Green-theme .van-expandabledetails table.InnerPanel, body.Green-theme .van-expandabledetails #vanContent td.SectionHeading, body.Green-theme .van-ContactsDetails .InnerPanel {
+    background-image: none !important;
+    box-shadow: none;
+    background: #f1f1f1;
+}
+
+#ctl00_ContentPlaceHolderVANPage_ctl00 {
+    width: 100%;
+}
+
+.WizardLabel, .WizardLabel td {
+    background-color: #f1f1f1;
+}
+
+.SideBarLinkDisabled {
+    font-size: 11px;
+}
+
+body.Green-body .WizardSpecialRow, body.Green-body .ListFilterPanelButtons, body.Green-body .van-specialdetails #vanContent table.WizardTableTerryBoxes .ContactsDoStuff, body.Green-body .StandardNameValueRenderer_TablePrimarySubHeaderRowTemplate_Td, body.Green-body hr, body.Green-body .StandardDataTableRenderer_TableFooterRowTemplate_Td, body.Green-body .ContactsDoStuff, body.Green-body #tableSubmitLowerDisplay .WizardTableDetailsInnerTable td.Text2, body.Green-body .van-ContactDetailScriptPDialer #TDOr, body.Green-body .pageSectionPanel_Jobs .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Green-body .pageSectionPanel_JobsOutOfCommittee .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Green-body .van-ContactDetailScript .TableHeadingMedium, body.Green-body .van-ContactDetailScript .StandardDataTableRenderer_TableHeaderRowTemplate_Th, body.Green-body .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableBodyRowTemplate_Td, body.Green-body .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableActionRowTemplate_Td, body.Green-body .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsRowStyle td:first-of-type, body.Green-body .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsAlternateRowStyle td:first-of-type, body.Green-body .van-OrganizationsContactsJobDetails .SectionHeading, body.Green-body ul.ui-sortable li, body.Green-theme .WizardSpecialRow, body.Green-theme .ListFilterPanelButtons, body.Green-theme .van-specialdetails #vanContent table.WizardTableTerryBoxes .ContactsDoStuff, body.Green-theme .StandardNameValueRenderer_TablePrimarySubHeaderRowTemplate_Td, body.Green-theme hr, body.Green-theme .StandardDataTableRenderer_TableFooterRowTemplate_Td, body.Green-theme .ContactsDoStuff, body.Green-theme #tableSubmitLowerDisplay .WizardTableDetailsInnerTable td.Text2, body.Green-theme .van-ContactDetailScriptPDialer #TDOr, body.Green-theme .pageSectionPanel_Jobs .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Green-theme .pageSectionPanel_JobsOutOfCommittee .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Green-theme .van-ContactDetailScript .TableHeadingMedium, body.Green-theme .van-ContactDetailScript .StandardDataTableRenderer_TableHeaderRowTemplate_Th, body.Green-theme .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableBodyRowTemplate_Td, body.Green-theme .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableActionRowTemplate_Td, body.Green-theme .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsRowStyle td:first-of-type, body.Green-theme .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsAlternateRowStyle td:first-of-type, body.Green-theme .van-OrganizationsContactsJobDetails .SectionHeading, body.Green-theme ul.ui-sortable li {
+    background: #fff;
+}
+
+body.Green-body #vanHeader {
+    background-image: none !important;
+    box-shadow: none;
+    background: #fff;
+}
+
+body.Green-body .SectionHeading, body.Green-body .van-subsection .WizardTableSpecialRow .WizardTableInnerTable .WizardSpecialRow, body.Green-body .rgMasterTable th, body.Green-body .ResultsHeaderStyle th, body.Green-body .StandardDataTableRenderer_TableHeaderRowTemplate_Table th, body.Green-body .van-specialdetails #vanContent .TableHeadingMedium, body.Green-body .van-list .SectionHeading, body.Green-body .WizardTableTerryBoxes .SectionHeading, body.Green-body .ResultsHeaderStyle td, body.Green-body .moduleHeader, body.Green-body #CalendarControl .SectionHeading, body.Green-theme .SectionHeading, body.Green-theme .van-subsection .WizardTableSpecialRow .WizardTableInnerTable .WizardSpecialRow, body.Green-theme .rgMasterTable th, body.Green-theme .ResultsHeaderStyle th, body.Green-theme .StandardDataTableRenderer_TableHeaderRowTemplate_Table th, body.Green-theme .van-specialdetails #vanContent .TableHeadingMedium, body.Green-theme .van-list .SectionHeading, body.Green-theme .WizardTableTerryBoxes .SectionHeading, body.Green-theme .ResultsHeaderStyle td, body.Green-theme .moduleHeader, body.Green-theme #CalendarControl .SectionHeading {
+    background-image: none !important;
+    background-color: #f1f1f1 !important;
+    box-shadow: none !important;
+}
+
+body.Tan-body .WizardTableSection .SectionHeading, body.Tan-body .MenuTable .MenuTableHeader, body.Tan-body .van-expandabledetails table.InnerPanel, body.Tan-body .van-expandabledetails #vanContent td.SectionHeading, body.Tan-theme #vanHeader, body.Tan-theme .WizardTableSection .SectionHeading, body.Tan-theme .MenuTable .MenuTableHeader, body.Tan-theme .van-expandabledetails table.InnerPanel, body.Tan-theme .van-expandabledetails #vanContent td.SectionHeading {
+    background: #fff;
+}
+
+body.Tan-body #vanHeader {
+    background-image: none !important;
+    box-shadow: none !important;
+    background: #fff !important;
+}
+
+body.Tan-body .WizardTableSection .SectionHeading, body.Tan-body .MenuTable .MenuTableHeader, body.Tan-body .van-expandabledetails table.InnerPanel, body.Tan-body .van-expandabledetails #vanContent td.SectionHeading, body.Tan-theme #vanHeader, body.Tan-theme .WizardTableSection .SectionHeading, body.Tan-theme .MenuTable .MenuTableHeader, body.Tan-theme .van-expandabledetails table.InnerPanel, body.Tan-theme .van-expandabledetails #vanContent td.SectionHeading {
+    background-image: none !important;
+    box-shadow: none !important;
+    background: #f1f1f1 !important;
+}
+
+body.Tan-body .WizardSpecialRow, body.Tan-body .ListFilterPanelButtons, body.Tan-body .van-specialdetails #vanContent table.WizardTableTerryBoxes .ContactsDoStuff, body.Tan-body .StandardNameValueRenderer_TablePrimarySubHeaderRowTemplate_Td, body.Tan-body hr, body.Tan-body .StandardDataTableRenderer_TableFooterRowTemplate_Td, body.Tan-body .ContactsDoStuff, body.Tan-body #vanContent #TableContainerNTLSecurity .TableHeadingMedium, body.Tan-body #tableSubmitLowerDisplay .WizardTableDetailsInnerTable td.Text2, body.Tan-body .van-ContactDetailScriptPDialer #TDOr, body.Tan-body .pageSectionPanel_Jobs .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Tan-body .pageSectionPanel_JobsOutOfCommittee .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Tan-body .van-ContactDetailScript .TableHeadingMedium, body.Tan-body .van-ContactDetailScript .StandardDataTableRenderer_TableHeaderRowTemplate_Th, body.Tan-body .van-ContactDetailScriptPDialer .StandardDataTableRenderer_TableHeaderRowTemplate_Th, body.Tan-body .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableBodyRowTemplate_Td, body.Tan-body .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableActionRowTemplate_Td, body.Tan-body .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsRowStyle td:first-of-type, body.Tan-body .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsAlternateRowStyle td:first-of-type, body.Tan-body .van-OrganizationsContactsJobDetails .SectionHeading, body.Tan-body ul.ui-sortable li, body.Tan-theme .WizardSpecialRow, body.Tan-theme .ListFilterPanelButtons, body.Tan-theme .van-specialdetails #vanContent table.WizardTableTerryBoxes .ContactsDoStuff, body.Tan-theme .StandardNameValueRenderer_TablePrimarySubHeaderRowTemplate_Td, body.Tan-theme hr, body.Tan-theme .StandardDataTableRenderer_TableFooterRowTemplate_Td, body.Tan-theme .ContactsDoStuff, body.Tan-theme #vanContent #TableContainerNTLSecurity .TableHeadingMedium, body.Tan-theme #tableSubmitLowerDisplay .WizardTableDetailsInnerTable td.Text2, body.Tan-theme .van-ContactDetailScriptPDialer #TDOr, body.Tan-theme .pageSectionPanel_Jobs .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Tan-theme .pageSectionPanel_JobsOutOfCommittee .StandardNameValueRenderer_TableSubHeaderRowTemplate_Td, body.Tan-theme .van-ContactDetailScript .TableHeadingMedium, body.Tan-theme .van-ContactDetailScript .StandardDataTableRenderer_TableHeaderRowTemplate_Th, body.Tan-theme .van-ContactDetailScriptPDialer .StandardDataTableRenderer_TableHeaderRowTemplate_Th, body.Tan-theme .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableBodyRowTemplate_Td, body.Tan-theme .pageSectionPanel_MerkleErrors .StandardDataTableRenderer_TableActionRowTemplate_Td, body.Tan-theme .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsRowStyle td:first-of-type, body.Tan-theme .van-FormPetitionRegistration .ResultsGridViewControlStyle .ResultsAlternateRowStyle td:first-of-type, body.Tan-theme .van-OrganizationsContactsJobDetails .SectionHeading, body.Tan-theme ul.ui-sortable li {
+    background: #fff !important;
+}
+
+.login-logo-big {
+    min-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login-logo-big img {
+    width: 70px;
+    height: 70px;
+}
+
+.login-form {
+    background: #fff;
+    margin: 0 auto;
+    width: 750px;
+    border: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+#TableLoginBody .LoginOpenIDContainer {
+    padding-left: 0;
+    margin-top: 40px;
+    left: 0;
+}
+
+.LoginOpenIDContainer {
+    margin-right: 0 !important;
+}
+
+#ctl00_ContentPlaceHolderVANPage_OpenIDSelectorLinkLink4 img {
+    opacity: 100;
+}
+
+#TableLoginBody .LoginLocal .LoginLabel {
+    font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", "Arial Narrow", Arial, sans-serif !important;
+}
+
+div#context-header-div {
+    max-width: 100%;
+}
+
+#TableLoginBody .LoginLocal {
+    left: 25px;
+}
