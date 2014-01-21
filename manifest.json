@@ -1,7 +1,7 @@
 {
   "name": "VAN UI",
   "description": "VAN UI is a plugin for Google Chrome that transforms the user interface of VAN into something familiar yet completely new.",
-  "version": "1.0",
+  "version": "1.1",
   "manifest_version": 2,
   "content_scripts": [
     {
