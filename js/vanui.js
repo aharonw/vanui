@@ -5,6 +5,8 @@ style.type = 'text/css';
 style.href = chrome.extension.getURL('css/vanui.css');
 (document.head||document.documentElement).appendChild(style);
 
+$(document.body).css('display', 'block');
+
 //Move the "Go To" bar up so it can stretch entire page
 $(".masterbanner").insertBefore("#ctl00_MasterPageMainTable");
 

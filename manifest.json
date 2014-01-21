@@ -6,11 +6,13 @@
   "content_scripts": [
     {
       "matches": ["http://votebuilder.com/*"],
+      "css": ["css/fouc.css"],
       "js": ["js/jquery-1.10.1.min.js", "js/vanui.js"],
       "all_frames": true
     }
   ],
   "web_accessible_resources": [
+      "css/fouc.css",
       "css/vanui.css",
       "js/jquery-1.10.1.min.js",
       "images/whiteCircles.svg",
