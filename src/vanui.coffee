@@ -1,3 +1,8 @@
+template   = require './templates/header.jade'
+
+
+
+
 # We have to use JS to apply our custom CSS since there are a lot other CSS files
 style      = document.createElement 'link'
 style.rel  = 'stylesheet'
