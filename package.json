@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+  	"watchify": "*",
     "jade": "1.1.x",
+    "coffeeify": "*",
     "jadeify": "*"
   }
 }

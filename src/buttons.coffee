@@ -57,14 +57,5 @@ Buttons = [
 
 ]
 
-swap = (icon) ->
-  if $(icon.id).length
-    document.getElementById(icon.id).src = chrome.extension.getURL(icon.icon)
-
-init = ->
-  $('#ctl00_ContentPlaceHolderVANPage_ctl04_ClearLink').html('<img id="ctl00_ContentPlaceHolderVANPage_ctl04_ClearButton" title="Clear" src="' + chrome.extension.getURL('images/glyphicons_207_remove_2.png') + '" />');
-  $('#ctl00_ContentPlaceHolderVANPage_ControlPanel_ClearLink').html('<img id="ctl00_ContentPlaceHolderVANPage_ControlPanel_ClearButton" title="Clear" src="' + chrome.extension.getURL('images/glyphicons_207_remove_2.png') + '" />');
-  swap icon for icon in Icons
-
-init()
+exports.buttons = Buttons
   

@@ -244,7 +244,7 @@ Icons = [
     id: '#ctl00_ContentPlaceHolderVANPage_EventsAccordionPane_header_HyperLinkImageIconCalendarEvents'
     icon: 'images/glyphicons_045_calendar.png'
   }
-  
+
   {
     id: '#ctl00_ContentPlaceHolderVANPage_HyperLinkImageIconQuickLookUpOrgs3565'
     icon: 'images/glyphicons_043_group.png'
@@ -272,12 +272,7 @@ Icons = [
 
 ]
 
-swap = (icon) ->
-  $(icon.id).html '<img src="' + chrome.extension.getURL(icon.icon) + '" />'
+exports.icons = Icons
 
-init = ->
-  swap icon for icon in Icons
-
-init()
 
 

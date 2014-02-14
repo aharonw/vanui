@@ -1,7 +1,7 @@
-template   = require './templates/header.jade'
+template   = require '../src/templates/header.jade'
 
-
-
+{buttons}  = require './buttons.coffee'
+{icons}    = require './icons.coffee'
 
 # We have to use JS to apply our custom CSS since there are a lot other CSS files
 style      = document.createElement 'link'
@@ -54,5 +54,15 @@ $('.footer').html '<span id="ctl00_LabelCopyright">&copy; 2014 NGP VAN, Inc - <a
 
 $('.MenuTableNoBorder').css 'border-top', '0'
 
+$('#ctl00_ContentPlaceHolderVANPage_ctl04_ClearLink').html('<img id="ctl00_ContentPlaceHolderVANPage_ctl04_ClearButton" title="Clear" src="' + chrome.extension.getURL('images/glyphicons_207_remove_2.png') + '" />');
+$('#ctl00_ContentPlaceHolderVANPage_ControlPanel_ClearLink').html('<img id="ctl00_ContentPlaceHolderVANPage_ControlPanel_ClearButton" title="Clear" src="' + chrome.extension.getURL('images/glyphicons_207_remove_2.png') + '" />');
 
+swapButton = (icon) ->
+  if $(icon.id).length
+    document.getElementById(icon.id).src = chrome.extension.getURL(icon.icon)
 
+swapIcon = (icon) ->
+  $(icon.id).html '<img src="' + chrome.extension.getURL(icon.icon) + '" />'
+
+swapIcon icon for icon in icons
+swapButton button for button in buttons
