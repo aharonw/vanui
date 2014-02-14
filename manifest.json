@@ -7,7 +7,7 @@
     {
       "matches": ["http://votebuilder.com/*"],
       "css": ["css/fouc.css"],
-      "js": ["libs/jquery-1.10.1.min.js", "build/vanui.js"],
+      "js": ["libs/jquery-1.10.1.min.js", "build/vanui.js", "build/icons.js", "build/buttons.js"],
       "all_frames": true
     }
   ],
