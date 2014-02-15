@@ -436,13 +436,23 @@ var jade_mixins = {};
 buf.push("<div id=\"header\">Header</div>");;return buf.join("");
 };
 },{"jade/runtime":1}],5:[function(require,module,exports){
-var button, buttons, icon, icons, logoURL, pageTitle, style, swapButton, swapIcon, template, userphotoURL, _i, _j, _len, _len1;
+var button, buttons, globalHeader, header, icon, icons, logoURL, pageTitle, style, swapButton, swapIcon, userphotoURL, _i, _j, _len, _len1;
 
-template = require('../src/templates/header.jade');
+header = require('../src/templates/header.jade');
 
 buttons = require('./buttons.coffee').buttons;
 
 icons = require('./icons.coffee').icons;
+
+globalHeader = document.createElement('div');
+
+globalHeader.setAttribute('id', 'global-header');
+
+$('body').prepend($(globalHeader));
+
+console.log(header({}));
+
+$('#global-header').html(header({}));
 
 style = document.createElement('link');
 

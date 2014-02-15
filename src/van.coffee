@@ -1,7 +1,15 @@
-template   = require '../src/templates/header.jade'
+header     = require '../src/templates/header.jade'
 
 {buttons}  = require './buttons.coffee'
 {icons}    = require './icons.coffee'
+
+globalHeader  = document.createElement 'div'
+globalHeader.setAttribute 'id', 'global-header'
+$('body').prepend $ globalHeader
+
+console.log header({})
+
+$('#global-header').html header({})
 
 # We have to use JS to apply our custom CSS since there are a lot other CSS files
 style      = document.createElement 'link'
