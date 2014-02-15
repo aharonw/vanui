@@ -436,97 +436,126 @@ var jade_mixins = {};
 buf.push("<div id=\"header\">Header</div>");;return buf.join("");
 };
 },{"jade/runtime":1}],5:[function(require,module,exports){
-var button, buttons, globalHeader, header, icon, icons, logoURL, pageTitle, style, swapButton, swapIcon, userphotoURL, _i, _j, _len, _len1;
-
-header = require('../src/templates/header.jade');
+var Vanity, buttons, header, icons, vanity;
 
 buttons = require('./buttons.coffee').buttons;
 
 icons = require('./icons.coffee').icons;
 
-globalHeader = document.createElement('div');
+header = require('../src/templates/header.jade');
 
-globalHeader.setAttribute('id', 'global-header');
-
-$('body').prepend($(globalHeader));
-
-console.log(header({}));
-
-$('#global-header').html(header({}));
-
-style = document.createElement('link');
-
-style.rel = 'stylesheet';
-
-style.type = 'text/css';
-
-style.href = chrome.extension.getURL('css/vanui.css');
-
-(document.head || document.documentElement).appendChild(style);
-
-$(document.body).css('display', 'block');
-
-$(".masterbanner").insertBefore("#ctl00_MasterPageMainTable");
-
-logoURL = chrome.extension.getURL('images/whiteCircles.svg');
-
-$("<img id='ngpvan-logo-image' src='" + logoURL + "' />").insertBefore("#header-van-goto");
-
-pageTitle = $(document).find("title").text();
-
-pageTitle = pageTitle.substring(0, pageTitle.indexOf("-") - 1);
-
-$("<h1 id='ngpvan-logo-name'>" + pageTitle + "</h1>").insertAfter("#ngpvan-logo-image");
-
-if (document.location.href.indexOf('Login') > -1) {
-  $(".masterbanner").remove();
-  $('body').removeClass('Grey-body classicColor').addClass('justin-login-page');
-  $('<div class="login-logo-big"><img src="' + logoURL + '" /></div>').insertBefore('#TableContentSetup');
-  $('<div class="login-form"></div>').insertBefore('#TableContentSetup');
-  $('#TableContentSetup').appendTo('.login-form');
-  $('#ctl00_ContentPlaceHolderVANPage_TableCellLoginContentBkgdSpaceLeft').remove();
-  $('#ctl00_ContentPlaceHolderVANPage_TableCellLoginContentBkgdSpaceRight').remove();
-}
-
-if (document.location.href.indexOf('PIN') > -1) {
-  $('.login-form').css('width', '970px');
-}
-
-userphotoURL = chrome.extension.getURL('images/justin.jpg');
-
-$("<img id='ngpvan-user-image' src='" + userphotoURL + "' />").insertAfter('#context-header-div ul li:last-child');
-
-$("<div id='ngpvan-tabs-bar'></div>").insertBefore('.masterbanner');
-
-$("#header ul").appendTo('#ngpvan-tabs-bar');
-
-$('.footer').html('<span id="ctl00_LabelCopyright">&copy; 2014 NGP VAN, Inc - <a href="http://www.ngpvan.com/content/privacy-policy" target="_blank">Privacy Policy</a></span>');
-
-$('.MenuTableNoBorder').css('border-top', '0');
-
-$('#ctl00_ContentPlaceHolderVANPage_ctl04_ClearLink').html('<img id="ctl00_ContentPlaceHolderVANPage_ctl04_ClearButton" title="Clear" src="' + chrome.extension.getURL('images/glyphicons_207_remove_2.png') + '" />');
-
-$('#ctl00_ContentPlaceHolderVANPage_ControlPanel_ClearLink').html('<img id="ctl00_ContentPlaceHolderVANPage_ControlPanel_ClearButton" title="Clear" src="' + chrome.extension.getURL('images/glyphicons_207_remove_2.png') + '" />');
-
-swapButton = function(icon) {
-  if ($(icon.id).length) {
-    return document.getElementById(icon.id).src = chrome.extension.getURL(icon.icon);
+Vanity = (function() {
+  function Vanity() {
+    this.$body = $(document.body);
+    this.addCss();
+    this.moveGoToBar();
+    this.insertNewLogo();
+    this.insertCommitteeName();
+    this.restyleLogin();
+    this.restylePinPage();
+    this.insertProfilePic();
+    this.insertNewTabs();
+    this.moveOldTabs();
+    this.updateFooter();
+    this.swapIcons();
   }
-};
 
-swapIcon = function(icon) {
-  return $(icon.id).html('<img src="' + chrome.extension.getURL(icon.icon) + '" />');
-};
+  Vanity.prototype.addCss = function() {
+    var style;
+    style = document.createElement('link');
+    style.rel = 'stylesheet';
+    style.type = 'text/css';
+    style.href = chrome.extension.getURL('css/vanui.css');
+    (document.head || document.documentElement).appendChild(style);
+    return this.$body.css('display', 'block');
+  };
 
-for (_i = 0, _len = icons.length; _i < _len; _i++) {
-  icon = icons[_i];
-  swapIcon(icon);
-}
+  Vanity.prototype.moveGoToBar = function() {
+    return $(".masterbanner").insertBefore("#ctl00_MasterPageMainTable");
+  };
 
-for (_j = 0, _len1 = buttons.length; _j < _len1; _j++) {
-  button = buttons[_j];
-  swapButton(button);
-}
+  Vanity.prototype.insertNewLogo = function() {
+    var logoURL;
+    logoURL = chrome.extension.getURL('images/whiteCircles.svg');
+    return $("<img id='ngpvan-logo-image' src='" + logoURL + "' />").insertBefore("#header-van-goto");
+  };
+
+  Vanity.prototype.insertCommitteeName = function() {
+    var pageTitle;
+    pageTitle = $(document).find("title").text();
+    pageTitle = pageTitle.substring(0, pageTitle.indexOf("-") - 1);
+    return $("<h1 id='ngpvan-logo-name'>" + pageTitle + "</h1>").insertAfter("#ngpvan-logo-image");
+  };
+
+  Vanity.prototype.restyleLogin = function() {
+    if (document.location.href.indexOf('Login') > -1) {
+      $(".masterbanner").remove();
+      $('body').removeClass('Grey-body classicColor').addClass('justin-login-page');
+      $('<div class="login-logo-big"><img src="' + logoURL + '" /></div>').insertBefore('#TableContentSetup');
+      $('<div class="login-form"></div>').insertBefore('#TableContentSetup');
+      $('#TableContentSetup').appendTo('.login-form');
+      $('#ctl00_ContentPlaceHolderVANPage_TableCellLoginContentBkgdSpaceLeft').remove();
+      return $('#ctl00_ContentPlaceHolderVANPage_TableCellLoginContentBkgdSpaceRight').remove();
+    }
+  };
+
+  Vanity.prototype.restylePinPage = function() {
+    if (document.location.href.indexOf('PIN') > -1) {
+      return $('.login-form').css('width', '970px');
+    }
+  };
+
+  Vanity.prototype.insertProfilePic = function() {
+    var userphotoURL;
+    userphotoURL = chrome.extension.getURL('images/justin.jpg');
+    return $("<img id='ngpvan-user-image' src='" + userphotoURL + "' />").insertAfter('#context-header-div ul li:last-child');
+  };
+
+  Vanity.prototype.insertNewTabs = function() {
+    return $("<div id='ngpvan-tabs-bar'></div>").insertBefore('.masterbanner');
+  };
+
+  Vanity.prototype.moveOldTabs = function() {
+    return $("#header ul").appendTo('#ngpvan-tabs-bar');
+  };
+
+  Vanity.prototype.updateFooter = function() {
+    return $('.footer').html('<span id="ctl00_LabelCopyright">&copy; 2014 NGP VAN, Inc - <a href="http://www.ngpvan.com/content/privacy-policy" target="_blank">Privacy Policy</a></span>');
+  };
+
+  Vanity.prototype.swapIcons = function() {
+    var button, icon, _i, _j, _len, _len1, _results;
+    for (_i = 0, _len = icons.length; _i < _len; _i++) {
+      icon = icons[_i];
+      this.swapIcon(icon);
+    }
+    _results = [];
+    for (_j = 0, _len1 = buttons.length; _j < _len1; _j++) {
+      button = buttons[_j];
+      _results.push(this.swapButton(button));
+    }
+    return _results;
+  };
+
+  Vanity.prototype.swapButton = function(icon) {
+    if ($(icon.id).length) {
+      return document.getElementById(icon.id).src = chrome.extension.getURL(icon.icon);
+    }
+  };
+
+  Vanity.prototype.swapIcon = function(icon) {
+    return $(icon.id).html('<img src="' + chrome.extension.getURL(icon.icon) + '" />');
+  };
+
+  Vanity.prototype.removeMenuTableBorder = function() {
+    return $('.MenuTableNoBorder').css('border-top', '0');
+  };
+
+  return Vanity;
+
+})();
+
+vanity = new Vanity;
 
 
 },{"../src/templates/header.jade":4,"./buttons.coffee":2,"./icons.coffee":3}],6:[function(require,module,exports){
