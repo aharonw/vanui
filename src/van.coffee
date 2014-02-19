@@ -1,8 +1,8 @@
-{buttons} = require './buttons.coffee'
-{icons}   = require './icons.coffee'
+{buttons}  = require './buttons.coffee'
+{icons}    = require './icons.coffee'
 
-header    = require '../src/templates/header.jade'
-
+HeaderView    = require '../src/templates/header.jade'
+VANHeaderView = require '../src/templates/van-header.jade'
 
 class Vanity
 
@@ -21,15 +21,23 @@ class Vanity
     @updateFooter()
     @swapIcons()
 
+    @appendHeader()
+    @appendGlobalHeader()
+    @appendVANHeader()
+
 
   addCss: ->
+    @appendStyleSheet 'css/vanui.css'
+    @appendStyleSheet 'css/header.css'
+    @$body.css 'display', 'block'
+
+
+  appendStyleSheet: (path) ->
     style      = document.createElement 'link'
     style.rel  = 'stylesheet'
     style.type = 'text/css'
-    style.href = chrome.extension.getURL 'css/vanui.css'
-
+    style.href = chrome.extension.getURL path
     (document.head or document.documentElement).appendChild style
-    @$body.css 'display', 'block'
 
 
   # Move the "Go To" bar up so it can stretch entire page
@@ -88,6 +96,9 @@ class Vanity
     $('.footer').html '<span id="ctl00_LabelCopyright">&copy; 2014 NGP VAN, Inc - <a href="http://www.ngpvan.com/content/privacy-policy" target="_blank">Privacy Policy</a></span>'
 
 
+  addIcon: (selector, path) ->
+    $(selector).html '<img src="' + chrome.extension.getURL(path) + '" />'
+
   swapIcons: ->
     @swapIcon icon for icon in icons
     @swapButton button for button in buttons
@@ -106,15 +117,60 @@ class Vanity
     $('.MenuTableNoBorder').css 'border-top', '0'
 
 
+  appendHeader: ->
+    header = document.createElement 'div'
+    header.setAttribute 'id', 'new-header'
+    @$body.prepend $ header
+
+
+  appendGlobalHeader: ->
+    globalHeader = document.createElement 'div'
+    globalHeader.setAttribute 'id', 'global-header'
+    $('#new-header').append $ globalHeader
+    $('#global-header').html HeaderView({})
+
+    @addIcon '#global-header .picture', 'images/aharon.jpg'
+    @addIcon '.nub', 'images/nub.svg'
+
+    @addIcon '#global-header .committee', 'images/new-votebuilder_light.svg'
+
+
+  appendVANHeader: ->
+    VANHeader = document.createElement 'div'
+    VANHeader.setAttribute 'id', 'van-header'
+    $('#new-header').append $ VANHeader
+    $('#van-header').html VANHeaderView({})
+    @setLinkListeners()
+    @setSectionHeaderColor '#00aff3'
+
+
+  setLinkListeners: ->
+    $('#tabs li').on 'click', @selectTab
+
+
+  selectTab: (e) =>
+    $tab  = $ e.currentTarget
+    color = $tab.attr 'data-color'
+    tabs  = $('#tabs li')
+    for tab in tabs
+      $(tab).removeClass('selected')
+    $tab.addClass 'selected'
+    @setSectionHeaderColor color
+
+
+  setSectionHeaderColor: (color) ->
+    $('#global-header').css 'background-color', color
+    $('.van-header-backdrop').css 'background-color', color
+    $('.MenuTableHeader').css 'background-color', color
+    $('.MenuTableHeader').css 'color', '#ffffff'
+
 
 vanity = new Vanity
 
 
-# globalHeader  = document.createElement 'div'
-# globalHeader.setAttribute 'id', 'global-header'
-# $('body').prepend $ globalHeader
 
-# $('#global-header').html header({})
+
+
 
 
 

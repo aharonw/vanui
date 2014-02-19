@@ -211,7 +211,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
 (1)
 });
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"fs":6}],2:[function(require,module,exports){
+},{"fs":7}],2:[function(require,module,exports){
 var Buttons;
 
 Buttons = [
@@ -433,19 +433,32 @@ module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 
-buf.push("<div id=\"header\">Header</div>");;return buf.join("");
+buf.push("<div class=\"wrapper\"><ul class=\"left\"><li class=\"committee\"></li><li class=\"subcommittee\"><div class=\"text\">New Jersey</div><div class=\"nub\"></div></li></ul><ul class=\"right\"><li class=\"help\">Help</li><li class=\"profile\"><div class=\"picture\"></div><div class=\"name\">Aharon Wasserman</div><div class=\"nub\"></div></li></ul></div>");;return buf.join("");
 };
 },{"jade/runtime":1}],5:[function(require,module,exports){
-var Vanity, buttons, header, icons, vanity;
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+
+buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#00aff3\" class=\"my-voters selected\">My Voters</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Campaign</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Casework</li></ul></div>");;return buf.join("");
+};
+},{"jade/runtime":1}],6:[function(require,module,exports){
+var HeaderView, VANHeaderView, Vanity, buttons, icons, vanity,
+  __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 buttons = require('./buttons.coffee').buttons;
 
 icons = require('./icons.coffee').icons;
 
-header = require('../src/templates/header.jade');
+HeaderView = require('../src/templates/header.jade');
+
+VANHeaderView = require('../src/templates/van-header.jade');
 
 Vanity = (function() {
   function Vanity() {
+    this.selectTab = __bind(this.selectTab, this);
     this.$body = $(document.body);
     this.addCss();
     this.moveGoToBar();
@@ -458,16 +471,24 @@ Vanity = (function() {
     this.moveOldTabs();
     this.updateFooter();
     this.swapIcons();
+    this.appendHeader();
+    this.appendGlobalHeader();
+    this.appendVANHeader();
   }
 
   Vanity.prototype.addCss = function() {
+    this.appendStyleSheet('css/vanui.css');
+    this.appendStyleSheet('css/header.css');
+    return this.$body.css('display', 'block');
+  };
+
+  Vanity.prototype.appendStyleSheet = function(path) {
     var style;
     style = document.createElement('link');
     style.rel = 'stylesheet';
     style.type = 'text/css';
-    style.href = chrome.extension.getURL('css/vanui.css');
-    (document.head || document.documentElement).appendChild(style);
-    return this.$body.css('display', 'block');
+    style.href = chrome.extension.getURL(path);
+    return (document.head || document.documentElement).appendChild(style);
   };
 
   Vanity.prototype.moveGoToBar = function() {
@@ -523,6 +544,10 @@ Vanity = (function() {
     return $('.footer').html('<span id="ctl00_LabelCopyright">&copy; 2014 NGP VAN, Inc - <a href="http://www.ngpvan.com/content/privacy-policy" target="_blank">Privacy Policy</a></span>');
   };
 
+  Vanity.prototype.addIcon = function(selector, path) {
+    return $(selector).html('<img src="' + chrome.extension.getURL(path) + '" />');
+  };
+
   Vanity.prototype.swapIcons = function() {
     var button, icon, _i, _j, _len, _len1, _results;
     for (_i = 0, _len = icons.length; _i < _len; _i++) {
@@ -551,6 +576,58 @@ Vanity = (function() {
     return $('.MenuTableNoBorder').css('border-top', '0');
   };
 
+  Vanity.prototype.appendHeader = function() {
+    var header;
+    header = document.createElement('div');
+    header.setAttribute('id', 'new-header');
+    return this.$body.prepend($(header));
+  };
+
+  Vanity.prototype.appendGlobalHeader = function() {
+    var globalHeader;
+    globalHeader = document.createElement('div');
+    globalHeader.setAttribute('id', 'global-header');
+    $('#new-header').append($(globalHeader));
+    $('#global-header').html(HeaderView({}));
+    this.addIcon('#global-header .picture', 'images/aharon.jpg');
+    this.addIcon('.nub', 'images/nub.svg');
+    return this.addIcon('#global-header .committee', 'images/new-votebuilder_light.svg');
+  };
+
+  Vanity.prototype.appendVANHeader = function() {
+    var VANHeader;
+    VANHeader = document.createElement('div');
+    VANHeader.setAttribute('id', 'van-header');
+    $('#new-header').append($(VANHeader));
+    $('#van-header').html(VANHeaderView({}));
+    this.setLinkListeners();
+    return this.setSectionHeaderColor('#00aff3');
+  };
+
+  Vanity.prototype.setLinkListeners = function() {
+    return $('#tabs li').on('click', this.selectTab);
+  };
+
+  Vanity.prototype.selectTab = function(e) {
+    var $tab, color, tab, tabs, _i, _len;
+    $tab = $(e.currentTarget);
+    color = $tab.attr('data-color');
+    tabs = $('#tabs li');
+    for (_i = 0, _len = tabs.length; _i < _len; _i++) {
+      tab = tabs[_i];
+      $(tab).removeClass('selected');
+    }
+    $tab.addClass('selected');
+    return this.setSectionHeaderColor(color);
+  };
+
+  Vanity.prototype.setSectionHeaderColor = function(color) {
+    $('#global-header').css('background-color', color);
+    $('.van-header-backdrop').css('background-color', color);
+    $('.MenuTableHeader').css('background-color', color);
+    return $('.MenuTableHeader').css('color', '#ffffff');
+  };
+
   return Vanity;
 
 })();
@@ -558,6 +635,6 @@ Vanity = (function() {
 vanity = new Vanity;
 
 
-},{"../src/templates/header.jade":4,"./buttons.coffee":2,"./icons.coffee":3}],6:[function(require,module,exports){
+},{"../src/templates/header.jade":4,"../src/templates/van-header.jade":5,"./buttons.coffee":2,"./icons.coffee":3}],7:[function(require,module,exports){
 
-},{}]},{},[5])
+},{}]},{},[6])
