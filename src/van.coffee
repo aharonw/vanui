@@ -142,7 +142,7 @@ class Vanity
     $('#new-header').append $ VANHeader
     $('#van-header').html VANHeaderView({})
     @setLinkListeners()
-    @setSectionHeaderColor '#00aff3'
+    @setSectionHeaderColor '#3498DB'
 
 
   setLinkListeners: ->
@@ -165,7 +165,7 @@ class Vanity
     $('.van-header-backdrop').css 'background-color', color
     $('.MenuTableHeader').css 'background-color', color
     $('.MenuTableHeader').css 'color', '#ffffff'
-
+    $('.MenuTableHeader').css 'opacity', '.7'
 
 vanity = new Vanity
 

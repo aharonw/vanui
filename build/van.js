@@ -602,7 +602,7 @@ Vanity = (function() {
     $('#new-header').append($(VANHeader));
     $('#van-header').html(VANHeaderView({}));
     this.setLinkListeners();
-    return this.setSectionHeaderColor('#00aff3');
+    return this.setSectionHeaderColor('#3498DB');
   };
 
   Vanity.prototype.setLinkListeners = function() {
@@ -626,7 +626,8 @@ Vanity = (function() {
     $('#global-header').css('background-color', color);
     $('.van-header-backdrop').css('background-color', color);
     $('.MenuTableHeader').css('background-color', color);
-    return $('.MenuTableHeader').css('color', '#ffffff');
+    $('.MenuTableHeader').css('color', '#ffffff');
+    return $('.MenuTableHeader').css('opacity', '.7');
   };
 
   return Vanity;
