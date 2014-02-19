@@ -29,6 +29,7 @@ class Vanity
   addCss: ->
     @appendStyleSheet 'css/vanui.css'
     @appendStyleSheet 'css/header.css'
+    @appendStyleSheet 'css/quick.css'
     @$body.css 'display', 'block'
 
 
@@ -155,6 +156,7 @@ class Vanity
     for tab in tabs
       $(tab).removeClass('selected')
     $tab.addClass 'selected'
+
     @setSectionHeaderColor color
 
 

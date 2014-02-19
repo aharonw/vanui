@@ -442,7 +442,7 @@ module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 
-buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#00aff3\" class=\"my-voters selected\">My Voters</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Campaign</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Casework</li></ul></div>");;return buf.join("");
+buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#3498DB\" class=\"my-voters selected\">My Voters</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Campaign</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Casework</li></ul></div>");;return buf.join("");
 };
 },{"jade/runtime":1}],6:[function(require,module,exports){
 var HeaderView, VANHeaderView, Vanity, buttons, icons, vanity,
@@ -479,6 +479,7 @@ Vanity = (function() {
   Vanity.prototype.addCss = function() {
     this.appendStyleSheet('css/vanui.css');
     this.appendStyleSheet('css/header.css');
+    this.appendStyleSheet('css/quick.css');
     return this.$body.css('display', 'block');
   };
 

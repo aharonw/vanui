@@ -17,7 +17,7 @@
 }
 
 #global-header {
-  background-color: #00aff3;
+  background-color: #3498DB;
   overflow: hidden;
   padding: 8px 0px;
   border-bottom: 1px solid rgba(255,255,255,0.5);
@@ -174,7 +174,7 @@ ul#tabs li {
 }
 
 ul#tabs li.my-voters.selected {
-  background-color: #00aff3;
+  background-color: #3498DB;
 }
 
 ul#tabs li.my-campaign.selected {
@@ -190,7 +190,7 @@ ul#tabs li.my-casework.selected {
 
 
 ul#tabs li.my-voters:hover {
-  background-color: #00aff3;
+  background-color: #3498DB;
 }
 
 ul#tabs li.my-campaign:hover {
@@ -206,7 +206,7 @@ ul#tabs li.my-casework:hover {
 }
 
 .van-header-backdrop {
-  background-color: #00aff3;
+  background-color: #3498DB;
   opacity: .5;
   position: absolute;
   top: 0;

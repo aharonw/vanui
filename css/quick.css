@@ -1,0 +1,16 @@
+#ctl00_ContentPlaceHolderVANPage_ctl00_PanelFilterItems {
+  width: 100% !important;
+}
+
+#TableFilters input {
+  padding: .8rem .5rem .7rem .5rem;
+  border: 0px solid #CCC !important;
+  border-radius: 0 !important;
+  background-color: #f4f4f4 !important;
+  color: #666666;
+  outline: none;
+}
+
+#vanHeader h1 {
+  padding-bottom: 7px;
+}

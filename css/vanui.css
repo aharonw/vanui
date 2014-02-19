@@ -11,7 +11,7 @@ body {
     /*-webkit-transform: translate3d(0, 0, 0);*/
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     border-color: #ccc;
-    background: none !important;
+    background: #f7f7f7 !important;
     padding-top: 80px;
 }
 
@@ -24,7 +24,7 @@ body {
 }
 
 body.classicColor, body.Grey-body {
-    background: #fff !important;
+    background: #f7f7f7 !important;
 }
 
 a, a:link, a:visited {
@@ -63,7 +63,7 @@ table.ContentSetup1 {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
-    background-color: #fff !important;
+    background-color: transparent !important;
 }
 
 .van-mainmenu {
@@ -81,7 +81,7 @@ table.ContentSetup1 {
 }
 
 #TDContentPlaceHolderVANPage {
-    background-color: #fff !important;
+    background-color: transparent !important;
     box-shadow: none !important;
 }
 
@@ -113,7 +113,7 @@ table.ContentSetup1 #TDContentPlaceHolderVANPage {
 }
 
 .masterpage #vanHeader, .WizardTableSection .SectionHeading {
-    background-color: #fff;
+    background-color: transparent;
     background-image: none;
     border-bottom: none;
     border: 0;
@@ -328,6 +328,7 @@ body.Grey-body .AddPageSectionContainer_SectionHeading_Td span, body.Grey-body .
 .WizardTableFilters {
     padding: 0;
     border: 1px solid #ddd;
+    border-bottom: none;
 }
 
 .WizardTableInnerTable {
@@ -344,9 +345,11 @@ table.ResultsGridViewControlStyle {
 }
 
 .WizardResults, .WizardResults td {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     padding-bottom: 10px !important;
     border: none !important;
+    font-weight: bold;
+    color: #666;
 }
 
 table.SubTablePagerStyle, table.SubTablePagerStyle td {
@@ -441,7 +444,7 @@ body.Grey-body .AddPageSectionContainer_SectionHeading_Td span, body.Grey-body .
 }
 
 .masterpage .van-mainmenu .SideBar {
-    background: #f9f9f9;
+    background: #ffffff;
     border: 1px solid #dedede !important;
     border-radius: 0 !important;
     -webkit-border-radius: 0 !important;
