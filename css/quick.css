@@ -3,14 +3,50 @@
 }
 
 #TableFilters input {
-  padding: .8rem .5rem .7rem .5rem;
-  border: 0px solid #CCC !important;
+  padding: 4px 7px !important;
+  border: 1px solid #ddd !important;
   border-radius: 0 !important;
-  background-color: #f4f4f4 !important;
+  background-color: #f7f7f7 !important;
   color: #666666;
   outline: none;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  height: auto;
+  width: auto;
+  font-size: 14px;
+  margin-right: 6px;
 }
 
 #vanHeader h1 {
   padding-bottom: 7px;
+}
+
+#vanHeader h1, #vanHeader .Headline1 {
+  color: #666;
+}
+
+#ctl00_ContentPlaceHolderVANPage_ctl00_RememberMeButton, #ctl00_ContentPlaceHolderVANPage_ctl00_ButtonClear, #ctl00_ContentPlaceHolderVANPage_ctl00_RefreshFilterButton {
+  border-radius: 0px !important;
+  background-image: none !important;
+  background-color: #3498DB !important;
+  border: none !important;
+  color: white;
+  font-size: 14px;
+  padding: 10px
+}
+
+.masterpage .van-inner {
+  border: 1px solid #ddd;
+}
+
+.MenuTableHeader {
+  border: none !important;
+}
+
+a.SideBarLink {
+  text-decoration: none !important;
+}
+
+a.SideBarLink:hover {
+  color: #999 !important;
 }

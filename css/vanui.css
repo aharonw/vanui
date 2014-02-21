@@ -104,8 +104,9 @@ table.ContentSetup1 #TDContentPlaceHolderVANPage {
 /*    width: 948px;*/
     box-shadow: none;
     -webkit-box-shadow: none;
-    padding: 0;
+    padding: 10px;
     margin: 0;
+    background-color: #fff;
 }
 
 .van-specialdetails {
@@ -327,8 +328,6 @@ body.Grey-body .AddPageSectionContainer_SectionHeading_Td span, body.Grey-body .
 
 .WizardTableFilters {
     padding: 0;
-    border: 1px solid #ddd;
-    border-bottom: none;
 }
 
 .WizardTableInnerTable {

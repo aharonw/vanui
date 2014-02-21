@@ -211,7 +211,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
 (1)
 });
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"fs":7}],2:[function(require,module,exports){
+},{"fs":8}],2:[function(require,module,exports){
 var Buttons;
 
 Buttons = [
@@ -433,7 +433,7 @@ module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 
-buf.push("<div class=\"wrapper\"><ul class=\"left\"><li class=\"committee\"></li><li class=\"subcommittee\"><div class=\"text\">New Jersey</div><div class=\"nub\"></div></li></ul><ul class=\"right\"><li class=\"help\">Help</li><li class=\"profile\"><div class=\"picture\"></div><div class=\"name\">Aharon Wasserman</div><div class=\"nub\"></div></li></ul></div>");;return buf.join("");
+buf.push("<div class=\"wrapper\"><ul class=\"left\"><li class=\"committee\"></li><li class=\"flag\"></li><li class=\"title\">- Labor Action Network</li></ul><ul class=\"right\"><li class=\"link\">Go To</li><li class=\"link\">AFL-CIO Switch</li><li class=\"help\">Logout</li><li class=\"profile\"><div class=\"picture\"></div><div class=\"name\">Aharon Wasserman</div><div class=\"nub\"></div></li></ul></div>");;return buf.join("");
 };
 },{"jade/runtime":1}],5:[function(require,module,exports){
 var jade = require("jade/runtime");
@@ -442,10 +442,19 @@ module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 
-buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#3498DB\" class=\"my-voters selected\">My Voters</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Campaign</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Casework</li></ul></div>");;return buf.join("");
+buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#cc0000\" class=\"my-voters selected\">Voter Reg</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Members</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Voters</li><li data-color=\"#31bdb5\" class=\"my-casework\">Working America</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Campaign</li></ul></div>");;return buf.join("");
 };
 },{"jade/runtime":1}],6:[function(require,module,exports){
-var HeaderView, VANHeaderView, Vanity, buttons, icons, vanity,
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+
+buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#3498DB\" class=\"my-voters selected\">My Voters</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Campaign</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Casework</li></ul></div>");;return buf.join("");
+};
+},{"jade/runtime":1}],7:[function(require,module,exports){
+var HeaderView, LANHeaderView, VANHeaderView, Vanity, buttons, icons, vanity,
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 buttons = require('./buttons.coffee').buttons;
@@ -455,6 +464,8 @@ icons = require('./icons.coffee').icons;
 HeaderView = require('../src/templates/header.jade');
 
 VANHeaderView = require('../src/templates/van-header.jade');
+
+LANHeaderView = require('../src/templates/lan-header.jade');
 
 Vanity = (function() {
   function Vanity() {
@@ -473,7 +484,7 @@ Vanity = (function() {
     this.swapIcons();
     this.appendHeader();
     this.appendGlobalHeader();
-    this.appendVANHeader();
+    this.appendLANHeader();
   }
 
   Vanity.prototype.addCss = function() {
@@ -591,8 +602,7 @@ Vanity = (function() {
     $('#new-header').append($(globalHeader));
     $('#global-header').html(HeaderView({}));
     this.addIcon('#global-header .picture', 'images/aharon.jpg');
-    this.addIcon('.nub', 'images/nub.svg');
-    return this.addIcon('#global-header .committee', 'images/new-votebuilder_light.svg');
+    return this.addIcon('.nub', 'images/nub.svg');
   };
 
   Vanity.prototype.appendVANHeader = function() {
@@ -602,7 +612,20 @@ Vanity = (function() {
     $('#new-header').append($(VANHeader));
     $('#van-header').html(VANHeaderView({}));
     this.setLinkListeners();
-    return this.setSectionHeaderColor('#3498DB');
+    this.setSectionHeaderColor('#3498DB');
+    return this.addIcon('#global-header .committee', 'images/new-votebuilder_light.svg');
+  };
+
+  Vanity.prototype.appendLANHeader = function() {
+    var LANHeader;
+    LANHeader = document.createElement('div');
+    LANHeader.setAttribute('id', 'van-header');
+    $('#new-header').append($(LANHeader));
+    $('#van-header').html(LANHeaderView({}));
+    this.setLinkListeners();
+    this.setSectionHeaderColor('#cc0000');
+    this.addIcon('#global-header .committee', 'images/aflcio.svg');
+    return this.addIcon('#global-header .flag', 'images/flag.svg');
   };
 
   Vanity.prototype.setLinkListeners = function() {
@@ -637,6 +660,6 @@ Vanity = (function() {
 vanity = new Vanity;
 
 
-},{"../src/templates/header.jade":4,"../src/templates/van-header.jade":5,"./buttons.coffee":2,"./icons.coffee":3}],7:[function(require,module,exports){
+},{"../src/templates/header.jade":4,"../src/templates/lan-header.jade":5,"../src/templates/van-header.jade":6,"./buttons.coffee":2,"./icons.coffee":3}],8:[function(require,module,exports){
 
-},{}]},{},[6])
+},{}]},{},[7])

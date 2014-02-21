@@ -3,6 +3,7 @@
 
 HeaderView    = require '../src/templates/header.jade'
 VANHeaderView = require '../src/templates/van-header.jade'
+LANHeaderView = require '../src/templates/lan-header.jade'
 
 class Vanity
 
@@ -23,7 +24,8 @@ class Vanity
 
     @appendHeader()
     @appendGlobalHeader()
-    @appendVANHeader()
+    # @appendVANHeader()
+    @appendLANHeader()
 
 
   addCss: ->
@@ -133,8 +135,6 @@ class Vanity
     @addIcon '#global-header .picture', 'images/aharon.jpg'
     @addIcon '.nub', 'images/nub.svg'
 
-    @addIcon '#global-header .committee', 'images/new-votebuilder_light.svg'
-
 
   appendVANHeader: ->
     VANHeader = document.createElement 'div'
@@ -143,6 +143,18 @@ class Vanity
     $('#van-header').html VANHeaderView({})
     @setLinkListeners()
     @setSectionHeaderColor '#3498DB'
+    @addIcon '#global-header .committee', 'images/new-votebuilder_light.svg'
+
+
+  appendLANHeader: ->
+    LANHeader = document.createElement 'div'
+    LANHeader.setAttribute 'id', 'van-header'
+    $('#new-header').append $ LANHeader
+    $('#van-header').html LANHeaderView({})
+    @setLinkListeners()
+    @setSectionHeaderColor '#cc0000'
+    @addIcon '#global-header .committee', 'images/aflcio.svg'
+    @addIcon '#global-header .flag', 'images/flag.svg'
 
 
   setLinkListeners: ->

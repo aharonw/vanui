@@ -1,157 +1,140 @@
-
-/* HIDE EXISTING HEADER */
-
-#ngpvan-tabs-bar, .masterbanner {
+#ngpvan-tabs-bar,
+.masterbanner {
   display: none;
 }
-
-
 /* DISPLAY GLOBAL HEADER */
-
 #new-header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
-  background-color: white;
+  background-color: #fff;
 }
-
-#global-header {
-  background-color: #3498DB;
-  overflow: hidden;
-  padding: 8px 0px;
-  border-bottom: 1px solid rgba(255,255,255,0.5);
-}
-
 .wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 1250px;
 }
-
 ul#logos {
   width: 400px;
   float: left;
 }
-
-#global-header .right {
+#global-header {
+  background-color: #00aff3;
+  overflow: hidden;
+  padding: 8px 0px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+}
+#global-header ul.right {
   float: right;
-  color: white;
+  color: #fff;
   font-size: 14px;
 }
-
-#global-header .right li {
+#global-header ul.right li {
   float: left;
   cursor: pointer;
-  opacity: .8;
+  opacity: 0.8;
 }
-
-#global-header .right li:hover {
+#global-header ul.right li>* {
+  float: left;
+}
+#global-header ul.right li:hover {
   opacity: 1;
 }
-
-#global-header .right .picture {
+#global-header ul.right li.profile .name {
+  padding-top: 3px;
+}
+#global-header ul.right li.profile .picture {
   margin-right: 10px;
 }
-
-#global-header .right .nub {
+#global-header ul.right li.profile .picture img {
+  height: 25px;
+}
+#global-header ul.right li.profile .nub {
   margin-top: 10px;
   margin-left: 10px;
 }
-
-.nub img {
+#global-header ul.right li.profile .nub img {
   width: 10px;
 }
-
-#global-header .right .help {
+#global-header ul.right .help {
   margin-right: 15px;
-  border-right: 1px solid #AAA;
+  border-right: 1px solid #fff;
   height: 25px;
-  padding: 3px 15px;
+  padding: 3px 15px 3px 10px;
 }
-
-#global-header .right .picture img {
-  height: 25px;
+#global-header ul.right .link {
+  padding: 3px 10px;
 }
-
-li.profile .picture, li.profile .name, li.profile .nub {
-  float: left
+#global-header ul.left {
+  float: left;
 }
-
-li.profile .name {
-  padding-top: 3px;
+#global-header ul.left li {
+  float: left;
 }
-
+#global-header ul.left li.committee img {
+  height: 23px;
+  margin-top: 1px;
+}
+#global-header ul.left li.subcommittee {
+  margin-left: 12px;
+  color: #fff;
+  font-size: 14px;
+  padding: 3px 6px 4px 6px;
+  border: 1px solid #fff;
+  opacity: 0.7;
+  cursor: pointer;
+}
+#global-header ul.left li.subcommittee:hover {
+  opacity: 1;
+}
+#global-header ul.left li.subcommittee .text {
+  float: left;
+}
+#global-header ul.left li.subcommittee .nub {
+  float: left;
+  margin-top: 7px;
+  margin-left: 5px;
+}
+#global-header ul.left li.subcommittee .nub img {
+  width: 10px;
+}
+#global-header ul.left li.flag {
+  width: 36px;
+  margin-left: 5px;
+}
+#global-header ul.left li.flag img {
+  float: left;
+  width: 36px;
+}
+#global-header ul.left li.title {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 4px;
+  margin-left: 6px;
+  letter-spacing: -1px;
+}
 #branding li {
   float: left;
 }
-
 #branding .subcommittee {
   margin-left: 12px;
   color: #fff;
   font-size: 16px;
   padding: 3px 6px 4px 6px;
   border: 1px solid #fff;
-  opacity: .7;
+  opacity: 0.7;
 }
-
 #branding .committee img {
   height: 25px;
 }
-
-
-#global-header .left {
-  float: left;
-}
-
-#global-header .left li {
-  float: left;
-}
-
-#global-header .left .committee img {
-  height: 23px;
-  margin-top: 1px;
-}
-
-#global-header .left .subcommittee {
-  margin-left: 12px;
-  color: #fff;
-  font-size: 14px;
-  padding: 3px 6px 4px 6px;
-  border: 1px solid #fff;
-  opacity: .7;
-  cursor: pointer;
-}
-
-#global-header .left .subcommittee:hover {
-  opacity: 1;
-}
-
-#global-header .left .text {
-  float: left;
-}
-
-#global-header .left .nub {
-  float: left;
-  margin-top: 7px;
-  margin-left: 5px;
-}
-
-
-
-
-
-
-
-
 #van-header {
-  background-color: #ffffff;
+  background-color: #fff;
   border-bottom: 1px solid #ddd;
   padding: 5px 0px 7px 0px;
   overflow: hidden;
   position: relative;
 }
-
 .van-header-wrapper {
   width: 100%;
   max-width: 1250px;
@@ -159,55 +142,44 @@ li.profile .name {
   position: relative;
   z-index: 5;
 }
-
 ul#tabs {
   float: left;
-  color: white;
+  color: #fff;
   font-size: 14px;
 }
-
 ul#tabs li {
   float: left;
   margin-right: 10px;
   cursor: pointer;
   padding: 4px 10px;
 }
-
 ul#tabs li.my-voters.selected {
-  background-color: #3498DB;
+  background-color: #c00;
 }
-
 ul#tabs li.my-campaign.selected {
   background-color: #12ae6a;
 }
-
 ul#tabs li.my-workers.selected {
   background-color: #e05f25;
 }
 ul#tabs li.my-casework.selected {
   background-color: #31bdb5;
 }
-
-
 ul#tabs li.my-voters:hover {
-  background-color: #3498DB;
+  background-color: #00aff3;
 }
-
 ul#tabs li.my-campaign:hover {
   background-color: #12ae6a;
 }
-
 ul#tabs li.my-workers:hover {
   background-color: #e05f25;
 }
-
 ul#tabs li.my-casework:hover {
   background-color: #31bdb5;
 }
-
 .van-header-backdrop {
-  background-color: #3498DB;
-  opacity: .5;
+  background-color: #00aff3;
+  opacity: 0.5;
   position: absolute;
   top: 0;
   left: 0;
