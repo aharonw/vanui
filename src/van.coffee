@@ -4,6 +4,7 @@
 HeaderView    = require '../src/templates/header.jade'
 VANHeaderView = require '../src/templates/van-header.jade'
 LANHeaderView = require '../src/templates/lan-header.jade'
+VANSocialView = require '../src/templates/van-social.jade'
 
 class Vanity
 
@@ -24,14 +25,17 @@ class Vanity
 
     @appendHeader()
     @appendGlobalHeader()
-    # @appendVANHeader()
-    @appendLANHeader()
+    @appendVANHeader()
+    #@appendLANHeader()
 
+    @appendSocial()
 
   addCss: ->
     @appendStyleSheet 'css/vanui.css'
     @appendStyleSheet 'css/header.css'
     @appendStyleSheet 'css/quick.css'
+    @appendStyleSheet 'css/notifications.css'
+    @appendStyleSheet 'css/social.css'
     @$body.css 'display', 'block'
 
 
@@ -157,8 +161,30 @@ class Vanity
     @addIcon '#global-header .flag', 'images/flag.svg'
 
 
+  appendSocial: ->
+    HomeWrapper = document.createElement 'div'
+    HomeWrapper.setAttribute 'class', 'home-wrapper'
+    @$body.append $ HomeWrapper
+    # $('.home-wrapper').append $('form.ng-pristine.ng-valid')
+
+    VANSocial = document.createElement 'div'
+    VANSocial.setAttribute 'id', 'van-social'
+    $('.home-wrapper').append $ VANSocial
+    $('#van-social').html VANSocialView({})
+    $('#publisher .bar .toggle').on 'click', @togglePublisher
+
+
+  toggleNotifications: ->
+    $('.link.notifications').toggleClass 'active'
+
+
+  togglePublisher: ->
+    $('#publisher').toggleClass 'active'
+
+    
   setLinkListeners: ->
     $('#tabs li').on 'click', @selectTab
+    $('.link.notifications').on 'click', @toggleNotifications
 
 
   selectTab: (e) =>

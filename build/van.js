@@ -211,7 +211,7 @@ exports.rethrow = function rethrow(err, filename, lineno, str){
 (1)
 });
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"fs":8}],2:[function(require,module,exports){
+},{"fs":9}],2:[function(require,module,exports){
 var Buttons;
 
 Buttons = [
@@ -433,7 +433,7 @@ module.exports = function template(locals) {
 var buf = [];
 var jade_mixins = {};
 
-buf.push("<div class=\"wrapper\"><ul class=\"left\"><li class=\"committee\"></li><li class=\"flag\"></li><li class=\"title\">- Labor Action Network</li></ul><ul class=\"right\"><li class=\"link\">Go To</li><li class=\"link\">AFL-CIO Switch</li><li class=\"help\">Logout</li><li class=\"profile\"><div class=\"picture\"></div><div class=\"name\">Aharon Wasserman</div><div class=\"nub\"></div></li></ul></div>");;return buf.join("");
+buf.push("<div class=\"wrapper\"><ul class=\"left\"><li class=\"committee\"></li><li class=\"flag\"></li><li class=\"title\">- New Jersey</li></ul><ul class=\"right\"><li class=\"link\">Go To</li><li class=\"link notifications\">Notifications (4)<ul id=\"notifications\"><li><div class=\"top\"><div class=\"icon\"></div><div class=\"title\">Create A List with Explorer</div><div class=\"dismiss\">Dismiss</div></div><div class=\"bottom\"><div class=\"actor\">Uretsky, Josh</div><div class=\"time-ago\">20m ago</div></div></li><li><div class=\"top\"><div class=\"icon\"></div><div class=\"title\">Screen shot of LHS ...</div><div class=\"dismiss\">Dismiss</div></div><div class=\"bottom\"><div class=\"actor\">Vardarmis, Torvic</div><div class=\"time-ago\">41m ago</div></div></li><li><div class=\"top\"><div class=\"icon\"></div><div class=\"title\">New Look and copy/paste</div><div class=\"dismiss\">Dismiss</div></div><div class=\"bottom\"><div class=\"actor\">Graham, Neale</div><div class=\"time-ago\">1d ago</div></div></li><li><div class=\"top\"><div class=\"icon\"></div><div class=\"title\">Exports error</div><div class=\"dismiss\">Dismiss</div></div><div class=\"bottom\"><div class=\"actor\">O'Connor, Colin</div><div class=\"time-ago\">1w ago</div></div></li><li><div class=\"top\"><div class=\"icon\"></div><div class=\"title\">CAL page sections...</div><div class=\"dismiss\">Dismiss</div></div><div class=\"bottom\"><div class=\"actor\">Zigler, Will</div><div class=\"time-ago\">2mo ago</div></div></li><li class=\"view-all\">View All</li></ul></li><li class=\"profile\"><div class=\"picture\"></div><div class=\"name\">Aharon Wasserman</div><div class=\"nub\"></div></li></ul></div>");;return buf.join("");
 };
 },{"jade/runtime":1}],5:[function(require,module,exports){
 var jade = require("jade/runtime");
@@ -454,7 +454,16 @@ var jade_mixins = {};
 buf.push("<div class=\"van-header-backdrop\"></div><div class=\"van-header-wrapper\"><ul id=\"tabs\"><li data-color=\"#3498DB\" class=\"my-voters selected\">My Voters</li><li data-color=\"#12ae6a\" class=\"my-campaign\">My Campaign</li><li data-color=\"#e05f25\" class=\"my-workers\">My Workers</li><li data-color=\"#31bdb5\" class=\"my-casework\">My Casework</li></ul></div>");;return buf.join("");
 };
 },{"jade/runtime":1}],7:[function(require,module,exports){
-var HeaderView, LANHeaderView, VANHeaderView, Vanity, buttons, icons, vanity,
+var jade = require("jade/runtime");
+
+module.exports = function template(locals) {
+var buf = [];
+var jade_mixins = {};
+
+buf.push("<div id=\"publisher\"><div class=\"bar\"><div class=\"toggle\"></div><div class=\"arrow\"></div></div><div class=\"field\"><textarea placeholder=\"Share something...\"></textarea><div class=\"instructions\">Press ENTER to post</div></div></div><ul id=\"nf\"><li><div class=\"right\"><div class=\"headline\"><div class=\"author-name\">Aharon Wasserman</div><div class=\"author-position\">Field Organizer</div></div><div class=\"post-content\">Oh, it's a jolly holiday with Mary. Mary makes your 'eart so light. When the day is gray and ordinary, Mary makes the sun shine bright!</div><div class=\"footer\"><a class=\"time-ago\">5m ago</a><span class=\"dot\">•</span><a class=\"comment\">Comment</a><span class=\"dot\">•</span><a class=\"like\">Like</a></div><div class=\"interactions\"><div class=\"likes\"><span>Liked by</span><a class=\"name\">Rob Winikates</a><span>and</span><a class=\"others\">4 others</a></div><ul class=\"comments\"><li><div class=\"right\"><div class=\"comment-content\"><div class=\"commenter-name\">Rob Winikates</div><div class=\"comment-text\">Love that song.</div></div><div class=\"comment-footer\"><div class=\"comment-timestamp\">3m ago</div></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-a-lga.xx.fbcdn.net/hphotos-frc1/t1.0-9/1601277_10101210942613091_487320413_n.jpg')\" class=\"commenter-photo\"></div></div></li><li><div class=\"right\"><div class=\"comment-content\"><div class=\"commenter-name\">Aharon Wasserman</div><div class=\"comment-text\">Yeah, me too.</div></div><div class=\"comment-footer\"><div class=\"comment-timestamp\">1m ago</div></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-b-lga.xx.fbcdn.net/hphotos-frc3/t31.0-8/737027_10102205194030369_686311291_o.jpg')\" class=\"commenter-photo\"></div></div></li></ul><div class=\"post-comment\"><input placeholder=\"Write a comment...\"/></div></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-b-lga.xx.fbcdn.net/hphotos-frc3/t31.0-8/737027_10102205194030369_686311291_o.jpg')\" class=\"author-photo\"></div></div></li><li><div class=\"right\"><div class=\"headline\"><div class=\"author-name\">Rob Winikates</div><div class=\"author-position\">Regional Field Director</div></div><div class=\"post-content\">Interesting article on our race.<div class=\"link-box\"><div style=\"background-image:url('http://espnfivethirtyeight.files.wordpress.com/2014/03/477890567banner.jpg')\" class=\"link-photo\"></div><div class=\"link-title\">FiveThirtyEight Senate Forecast: GOP Is Slight Favorite in Race for Senate Control</div><div class=\"link-preview\">When FiveThirtyEight last issued a U.S. Senate forecast - way back in July - we concluded the race for Senate control was a toss-up. That was a little ahead of the...</div></div></div><div class=\"footer\"><a class=\"time-ago\">5m ago</a><span class=\"dot\">•</span><a class=\"comment\">Comment</a><span class=\"dot\">•</span><a class=\"like\">Like</a></div><div class=\"interactions\"><div class=\"likes\"><span>Liked by</span><a class=\"name\">John Lee</a><span>and</span><a class=\"others\">16 others</a></div><div class=\"post-comment\"><input placeholder=\"Write a comment...\"/></div></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-a-lga.xx.fbcdn.net/hphotos-frc1/t1.0-9/1601277_10101210942613091_487320413_n.jpg')\" class=\"author-photo\"></div></div></li><li><div class=\"right\"><div class=\"headline\"><div class=\"author-name\">Justin Lewis</div><div class=\"author-position\">CTO</div></div><div class=\"post-content\"><img src=\"http://designyoutrust.com/wp-content/uploads6/ob8.jpg\"/></div><div class=\"footer\"><a class=\"time-ago\">5m ago</a><span class=\"dot\">•</span><a class=\"comment\">Comment</a><span class=\"dot\">•</span><a class=\"like\">Like</a></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-b-lga.xx.fbcdn.net/hphotos-prn1/t31.0-8/886466_10101162219499827_494481719_o.jpg');background-position:90%;\" class=\"author-photo\"></div></div></li><li><div class=\"right\"><div class=\"headline\"><div class=\"author-name\">Stu Trevelyan</div><div class=\"author-position\">Finance Director</div></div><div class=\"post-content\">Oh 'appiness is bloomin' all around 'er. The daffoldils are smilin' at the dove. When Mary 'olds your 'and you feel so grand, your 'eart starts beatin' like a big brass band. Oh, it's a jolly holiday with Mary. No wonder that it's Mary that we love!</div><div class=\"footer\"><a class=\"time-ago\">5m ago</a><span class=\"dot\">•</span><a class=\"comment\">Comment</a><span class=\"dot\">•</span><a class=\"like\">Like</a></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-b-lga.xx.fbcdn.net/hphotos-frc3/t1.0-9/310253_10150309612795723_421724457_n.jpg')\" class=\"author-photo\"></div></div></li><li><div class=\"right\"><div class=\"headline\"><div class=\"author-name\">John Lee</div><div class=\"author-position\">Intern</div></div><div class=\"post-content\">Oh, it's a jolly holiday with Mary. Mary makes your 'eart so light. When the day is gray and ordinary, Mary makes the sun shine bright!</div><div class=\"footer\"><a class=\"time-ago\">5m ago</a><span class=\"dot\">•</span><a class=\"comment\">Comment</a><span class=\"dot\">•</span><a class=\"like\">Like</a></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-a-lga.xx.fbcdn.net/hphotos-frc3/t1.0-9/1375207_10100194950549360_503587346_n.jpg')\" class=\"author-photo\"></div></div></li><li><div class=\"right\"><div class=\"headline\"><div class=\"author-name\">Drew Miller</div><div class=\"author-position\">Press Secretary</div></div><div class=\"post-content\">Oh, it's a jolly holiday with Mary. Mary makes your 'eart so light. When the day is gray and ordinary, Mary makes the sun shine bright!</div><div class=\"footer\"><a class=\"time-ago\">5m ago</a><span class=\"dot\">•</span><a class=\"comment\">Comment</a><span class=\"dot\">•</span><a class=\"like\">Like</a></div></div><div class=\"left\"><div style=\"background-image:url('https://scontent-a-lga.xx.fbcdn.net/hphotos-frc1/t1.0-9/1601277_10101210942613091_487320413_n.jpg')\" class=\"author-photo\"></div></div></li></ul>");;return buf.join("");
+};
+},{"jade/runtime":1}],8:[function(require,module,exports){
+var HeaderView, LANHeaderView, VANHeaderView, VANSocialView, Vanity, buttons, icons, vanity,
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 buttons = require('./buttons.coffee').buttons;
@@ -466,6 +475,8 @@ HeaderView = require('../src/templates/header.jade');
 VANHeaderView = require('../src/templates/van-header.jade');
 
 LANHeaderView = require('../src/templates/lan-header.jade');
+
+VANSocialView = require('../src/templates/van-social.jade');
 
 Vanity = (function() {
   function Vanity() {
@@ -484,13 +495,16 @@ Vanity = (function() {
     this.swapIcons();
     this.appendHeader();
     this.appendGlobalHeader();
-    this.appendLANHeader();
+    this.appendVANHeader();
+    this.appendSocial();
   }
 
   Vanity.prototype.addCss = function() {
     this.appendStyleSheet('css/vanui.css');
     this.appendStyleSheet('css/header.css');
     this.appendStyleSheet('css/quick.css');
+    this.appendStyleSheet('css/notifications.css');
+    this.appendStyleSheet('css/social.css');
     return this.$body.css('display', 'block');
   };
 
@@ -628,8 +642,29 @@ Vanity = (function() {
     return this.addIcon('#global-header .flag', 'images/flag.svg');
   };
 
+  Vanity.prototype.appendSocial = function() {
+    var HomeWrapper, VANSocial;
+    HomeWrapper = document.createElement('div');
+    HomeWrapper.setAttribute('class', 'home-wrapper');
+    this.$body.append($(HomeWrapper));
+    VANSocial = document.createElement('div');
+    VANSocial.setAttribute('id', 'van-social');
+    $('.home-wrapper').append($(VANSocial));
+    $('#van-social').html(VANSocialView({}));
+    return $('#publisher .bar .toggle').on('click', this.togglePublisher);
+  };
+
+  Vanity.prototype.toggleNotifications = function() {
+    return $('.link.notifications').toggleClass('active');
+  };
+
+  Vanity.prototype.togglePublisher = function() {
+    return $('#publisher').toggleClass('active');
+  };
+
   Vanity.prototype.setLinkListeners = function() {
-    return $('#tabs li').on('click', this.selectTab);
+    $('#tabs li').on('click', this.selectTab);
+    return $('.link.notifications').on('click', this.toggleNotifications);
   };
 
   Vanity.prototype.selectTab = function(e) {
@@ -660,6 +695,6 @@ Vanity = (function() {
 vanity = new Vanity;
 
 
-},{"../src/templates/header.jade":4,"../src/templates/lan-header.jade":5,"../src/templates/van-header.jade":6,"./buttons.coffee":2,"./icons.coffee":3}],8:[function(require,module,exports){
+},{"../src/templates/header.jade":4,"../src/templates/lan-header.jade":5,"../src/templates/van-header.jade":6,"../src/templates/van-social.jade":7,"./buttons.coffee":2,"./icons.coffee":3}],9:[function(require,module,exports){
 
-},{}]},{},[7])
+},{}]},{},[8])

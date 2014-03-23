@@ -1,0 +1,268 @@
+.home-wrapper
+  width: 1350px
+  margin: 0 auto
+
+form.ng-pristine.ng-valid
+  padding-right: 280px
+
+#van-social
+  width: 360px
+  position: fixed
+  right: 0
+  top: 0
+  background-color: white
+  height: 1000px
+  float: right
+  margin-top: 72px
+  border: 1px solid #dedede
+  overflow: scroll
+
+#publisher
+  float: left
+  width: 100%
+  margin-bottom: 5px
+
+  .bar
+    background-color: #fafafa
+    padding: 15px 10px 5px 10px
+    border-bottom: 1px solid #eee
+    float: left
+    width: 100%
+
+    .toggle
+      background-image: url('/images/publishToggle.png')
+      height: 25px
+      width: 25px
+      cursor: pointer
+      float: right
+
+      &:hover
+        background-position: 0 -25px
+
+    .arrow
+      background-image: url('/images/left-arrow.png')
+      height: 25px
+      width: 25px
+      cursor: pointer
+      float: left
+      opacity: .8
+      &:hover
+        background-position: 0 -25px
+
+  .field
+    width: 100%
+    float: left
+    border-bottom: 1px solid #eee
+    height: 0px
+    transition: height .3s
+    -webkit-transition: height .3s
+    overflow: hidden
+    position: relative
+
+    textarea
+      width: 100%
+      float: left
+      border: 0 solid #fff
+      padding: 12px
+      color: #666
+      font-size: 15px
+      resize: none
+
+    .instructions
+      background-color: #f7f7f7
+      color: #999
+      width: 100%
+      float: left
+      position: absolute
+      bottom: 0
+      padding: 2px 12px
+      border-top: 1px solid #eee
+
+  &.active
+    .field
+      height: 100px
+    .bar
+      .toggle
+        background-position: 0 -25px
+
+ul#nf
+  width: 100%
+  padding-top: 20px
+  float: left
+  li
+    padding: 0px 20px
+    border-bottom: 1px solid #eee
+    float: left
+    margin-bottom: 20px
+    padding-bottom: 15px
+
+    .right
+      width: 100%
+      padding-left: 62px
+      float: left
+      text-align: left
+      
+      .headline
+        font-weight: bold
+        margin-bottom: 3px
+        
+        .author-name
+          color: #666
+          display: inline
+          margin-right: 5px
+          font-size: 14px
+          color: #0088cc
+          &:hover
+            cursor: pointer
+            opacity: .7
+          
+        .author-position
+          color: #999
+          font-size: 80%
+          display: inline
+          font-size: 13px
+          display: none
+
+      .post-content
+        color: #444
+        line-height: 18px
+        font-size: 14px
+
+        img
+          width: 100%
+          margin-top: 5px
+          margin-bottom: 5px
+
+        .link-box
+          float: left
+          width: 100%
+          background-color: #eee
+          border: 1px solid #CCC
+          margin: 5px 0px
+          padding-bottom: 10px
+          cursor: pointer
+
+          &:hover
+            opacity: .6
+
+          .link-photo
+            float: left
+            height: 80px
+            width: 100%
+            background-size: cover
+            background-position: 50%
+            margin-bottom: 10px
+          .link-title
+            font-weight: bold
+            float: left
+            padding: 0px 10px
+            margin-bottom: 5px
+          .link-preview
+            float: left
+            padding: 0px 10px
+
+      
+      .footer
+        color: #999
+        font-size: 13px
+        width: 100%
+        text-align: left
+        padding: 0
+        margin: 0
+        margin-top: 5px
+
+        span, a
+          margin-right: 5px
+          color: #999
+
+        a
+          cursor: pointer
+
+      .interactions
+        width: 100%
+        float: left
+        margin-top: 8px
+        border-top: 1px solid #eee
+
+        .post-comment
+          background-color: #f7f7f7
+          float: left
+          width: 100%
+          padding: 5px
+          input
+            border: 1px solid #ddd
+            width: 100%
+            padding: 2px 5px
+
+        .likes
+          background-color: #f7f7f7
+          padding: 5px
+          border-bottom: 1px solid #ddd
+          a
+            color: #0088cc
+            cursor: pointer
+          span, a
+            margin-right: 3px
+
+        ul.comments
+          width: 100%
+          float: left
+
+          li
+            width: 100%
+            float: left
+            background-color: #f7f7f7
+            padding: 5px
+            margin-bottom: 0px
+            border-bottom: 1px solid #ddd
+
+            .right
+              width: 100%
+              padding-left: 31px
+              float: left
+              text-align: left
+
+              .comment-content
+                .commenter-name
+                  font-weight: bold
+                  display: inline
+                  margin-right: 4px
+                  color: #0088cc
+
+                  &:hover
+                    cursor: pointer
+                    opacity: .7
+
+                .comment-text
+                  display: inline
+                  color: #666
+              .comment-footer
+                color: #999
+
+            .left
+              float: left
+              margin-left: -100%
+
+              .commenter-photo
+                width: 25px
+                height: 25px
+                background-size: cover
+                background-color: #666
+                &:hover
+                  opacity: .7
+                  cursor: pointer
+    .left
+      float: left
+      margin-left: -100%
+      
+      .author-photo
+        width: 50px
+        height: 50px
+        background-size: cover
+        border-radius: 1px
+        background-color: brown
+        border: 1px solid #eeeeee
+
+        &:hover
+          cursor: pointer
+          opacity: .7

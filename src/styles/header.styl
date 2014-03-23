@@ -9,7 +9,6 @@
   top: 0
   width: 100%
   z-index: 100
-  background-color: white
 
 .wrapper
   width: 90%
@@ -22,9 +21,10 @@ ul#logos
 
 #global-header
   background-color: #00aff3
-  overflow: hidden
-  padding: 8px 0px
+  padding: 0px
   border-bottom: 1px solid rgba(255,255,255,0.5)
+  float: left
+  width: 100%
 
   ul.right
     float: right
@@ -34,7 +34,7 @@ ul#logos
     li
       float: left
       cursor: pointer
-      opacity: .8
+      opacity: 1
 
       &>*
         float: left
@@ -43,7 +43,7 @@ ul#logos
         opacity: 1
 
       &.profile
-        
+        padding: 8px
         .name
           padding-top: 3px
 
@@ -60,19 +60,20 @@ ul#logos
           img
             width: 10px
 
+      &:hover
+        background-color: rgba(255,255,255,.2)
+
     .help
-      margin-right: 15px
-      border-right: 1px solid #FFF
-      height: 25px
-      padding: 3px 15px 3px 10px
+      margin-right: 25px
+      padding: 11px
 
     .link
-      padding: 3px 10px
+      padding: 11px 10px
 
 
   ul.left
     float: left
-
+    padding: 7px 0px
     li
       float: left
 
@@ -143,8 +144,9 @@ ul#logos
   background-color: #ffffff
   border-bottom: 1px solid #ddd
   padding: 5px 0px 7px 0px
-  overflow: hidden
   position: relative
+  float: left
+  width: 100%
 
 .van-header-wrapper
   width: 100%
@@ -165,7 +167,7 @@ ul#tabs
     padding: 4px 10px
 
 ul#tabs li.my-voters.selected
-  background-color: #cc0000
+  background-color: #3498DB
 
 ul#tabs li.my-campaign.selected
   background-color: #12ae6a

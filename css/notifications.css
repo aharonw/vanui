@@ -1,0 +1,78 @@
+li.link.notifications {
+  position: relative;
+  z-index: 10;
+}
+li.link.notifications.active {
+  background-color: #fff;
+  color: #26598c;
+}
+li.link.notifications.active:hover {
+  background-color: #fff !important;
+  color: #26598c;
+}
+li.link.notifications.active #notifications {
+  display: block;
+}
+#notifications {
+  top: 40px;
+  left: 0px;
+  width: 375px;
+  position: absolute;
+  z-index: 20;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  -webkit-box-shadow: 1px 1px 0px rgba(0,0,0,0.1);
+  display: none;
+}
+#notifications li {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  color: #666;
+  padding: 15px 20px;
+}
+#notifications li .top {
+  float: left;
+  width: 100%;
+}
+#notifications li .top .icon {
+  width: 15px;
+  height: 15px;
+  float: left;
+  background-color: #ccc;
+  margin-right: 10px;
+  margin-top: 2px;
+}
+#notifications li .top .title {
+  font-weight: 600;
+  float: left;
+  text-align: left;
+  color: #26598c;
+}
+#notifications li .top .dismiss {
+  float: right;
+  font-size: 11px;
+  color: #26598c;
+  opacity: 0.7;
+}
+#notifications li .bottom {
+  float: left;
+  width: 100%;
+  text-align: left;
+  margin-top: 2px;
+}
+#notifications li .bottom .time-ago {
+  float: right;
+  color: #999;
+  font-size: 11px;
+}
+#notifications li .bottom .actor {
+  float: left;
+  color: #999;
+  margin-right: 5px;
+  margin-left: 25px;
+}
+#notifications li.view-all {
+  text-align: center;
+  color: #26598c;
+  background-color: #f7f7f7;
+}

@@ -1,0 +1,279 @@
+.home-wrapper {
+  width: 1350px;
+  margin: 0 auto;
+}
+form.ng-pristine.ng-valid {
+  padding-right: 280px;
+}
+#van-social {
+  width: 360px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #fff;
+  height: 1000px;
+  float: right;
+  margin-top: 72px;
+  border: 1px solid #dedede;
+  overflow: scroll;
+}
+#publisher {
+  float: left;
+  width: 100%;
+  margin-bottom: 5px;
+}
+#publisher .bar {
+  background-color: #fafafa;
+  padding: 15px 10px 5px 10px;
+  border-bottom: 1px solid #eee;
+  float: left;
+  width: 100%;
+}
+#publisher .bar .toggle {
+  background-image: url("/images/publishToggle.png");
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  float: right;
+}
+#publisher .bar .toggle:hover {
+  background-position: 0 -25px;
+}
+#publisher .bar .arrow {
+  background-image: url("/images/left-arrow.png");
+  height: 25px;
+  width: 25px;
+  cursor: pointer;
+  float: left;
+  opacity: 0.8;
+}
+#publisher .bar .arrow:hover {
+  background-position: 0 -25px;
+}
+#publisher .field {
+  width: 100%;
+  float: left;
+  border-bottom: 1px solid #eee;
+  height: 0px;
+  transition: height 0.3s;
+  -webkit-transition: height 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+#publisher .field textarea {
+  width: 100%;
+  float: left;
+  border: 0 solid #fff;
+  padding: 12px;
+  color: #666;
+  font-size: 15px;
+  resize: none;
+}
+#publisher .field .instructions {
+  background-color: #f7f7f7;
+  color: #999;
+  width: 100%;
+  float: left;
+  position: absolute;
+  bottom: 0;
+  padding: 2px 12px;
+  border-top: 1px solid #eee;
+}
+#publisher.active .field {
+  height: 100px;
+}
+#publisher.active .bar .toggle {
+  background-position: 0 -25px;
+}
+ul#nf {
+  width: 100%;
+  padding-top: 20px;
+  float: left;
+}
+ul#nf li {
+  padding: 0px 20px;
+  border-bottom: 1px solid #eee;
+  float: left;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+}
+ul#nf li .right {
+  width: 100%;
+  padding-left: 62px;
+  float: left;
+  text-align: left;
+}
+ul#nf li .right .headline {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+ul#nf li .right .headline .author-name {
+  color: #666;
+  display: inline;
+  margin-right: 5px;
+  font-size: 14px;
+  color: #08c;
+}
+ul#nf li .right .headline .author-name:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+ul#nf li .right .headline .author-position {
+  color: #999;
+  font-size: 80%;
+  display: inline;
+  font-size: 13px;
+  display: none;
+}
+ul#nf li .right .post-content {
+  color: #444;
+  line-height: 18px;
+  font-size: 14px;
+}
+ul#nf li .right .post-content img {
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ul#nf li .right .post-content .link-box {
+  float: left;
+  width: 100%;
+  background-color: #eee;
+  border: 1px solid #ccc;
+  margin: 5px 0px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+ul#nf li .right .post-content .link-box:hover {
+  opacity: 0.6;
+}
+ul#nf li .right .post-content .link-box .link-photo {
+  float: left;
+  height: 80px;
+  width: 100%;
+  background-size: cover;
+  background-position: 50%;
+  margin-bottom: 10px;
+}
+ul#nf li .right .post-content .link-box .link-title {
+  font-weight: bold;
+  float: left;
+  padding: 0px 10px;
+  margin-bottom: 5px;
+}
+ul#nf li .right .post-content .link-box .link-preview {
+  float: left;
+  padding: 0px 10px;
+}
+ul#nf li .right .footer {
+  color: #999;
+  font-size: 13px;
+  width: 100%;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  margin-top: 5px;
+}
+ul#nf li .right .footer span,
+ul#nf li .right .footer a {
+  margin-right: 5px;
+  color: #999;
+}
+ul#nf li .right .footer a {
+  cursor: pointer;
+}
+ul#nf li .right .interactions {
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+  border-top: 1px solid #eee;
+}
+ul#nf li .right .interactions .post-comment {
+  background-color: #f7f7f7;
+  float: left;
+  width: 100%;
+  padding: 5px;
+}
+ul#nf li .right .interactions .post-comment input {
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 2px 5px;
+}
+ul#nf li .right .interactions .likes {
+  background-color: #f7f7f7;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+ul#nf li .right .interactions .likes a {
+  color: #08c;
+  cursor: pointer;
+}
+ul#nf li .right .interactions .likes span,
+ul#nf li .right .interactions .likes a {
+  margin-right: 3px;
+}
+ul#nf li .right .interactions ul.comments {
+  width: 100%;
+  float: left;
+}
+ul#nf li .right .interactions ul.comments li {
+  width: 100%;
+  float: left;
+  background-color: #f7f7f7;
+  padding: 5px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid #ddd;
+}
+ul#nf li .right .interactions ul.comments li .right {
+  width: 100%;
+  padding-left: 31px;
+  float: left;
+  text-align: left;
+}
+ul#nf li .right .interactions ul.comments li .right .comment-content .commenter-name {
+  font-weight: bold;
+  display: inline;
+  margin-right: 4px;
+  color: #08c;
+}
+ul#nf li .right .interactions ul.comments li .right .comment-content .commenter-name:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+ul#nf li .right .interactions ul.comments li .right .comment-content .comment-text {
+  display: inline;
+  color: #666;
+}
+ul#nf li .right .interactions ul.comments li .right .comment-footer {
+  color: #999;
+}
+ul#nf li .right .interactions ul.comments li .left {
+  float: left;
+  margin-left: -100%;
+}
+ul#nf li .right .interactions ul.comments li .left .commenter-photo {
+  width: 25px;
+  height: 25px;
+  background-size: cover;
+  background-color: #666;
+}
+ul#nf li .right .interactions ul.comments li .left .commenter-photo:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+ul#nf li .left {
+  float: left;
+  margin-left: -100%;
+}
+ul#nf li .left .author-photo {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 1px;
+  background-color: #a52a2a;
+  border: 1px solid #eee;
+}
+ul#nf li .left .author-photo:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
