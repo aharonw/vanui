@@ -13,5 +13,5 @@ $ watchify -t coffeeify -t jadeify src/van.coffee -o build/van.js -v
 
 ### Watch stylus files
 ```shell
-$ stylus -w -o ../../css/
+$ stylus -w src/styles/ -o css/
 ```

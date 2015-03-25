@@ -25,8 +25,8 @@ class Vanity
 
     @appendHeader()
     @appendGlobalHeader()
-    @appendVANHeader()
-    #@appendLANHeader()
+    # @appendVANHeader()
+    @appendLANHeader()
 
     @appendSocial()
 
